@@ -1,0 +1,918 @@
+{
+  "navservices": {
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "navprocess": {
+    "en": "How it works",
+    "ar": "كيف نعمل"
+  },
+  "navcalculators": {
+    "en": "Calculators",
+    "ar": "الحاسبات"
+  },
+  "navabout": {
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "navreviews": {
+    "en": "Reviews",
+    "ar": "الآراء"
+  },
+  "navcontact": {
+    "en": "Contact",
+    "ar": "تواصل معنا"
+  },
+  "skip": {
+    "en": "Skip to content",
+    "ar": "انتقل إلى المحتوى"
+  },
+  "brandSub": {
+    "en": "BANKING SERVICES & CONSULTATIONS",
+    "ar": "الخدمات والاستشارات المصرفية"
+  },
+  "whatsapp": {
+    "en": "WhatsApp us",
+    "ar": "راسلنا عبر واتساب"
+  },
+  "heroLocation": {
+    "en": "ROOTED IN RAS AL KHAIMAH. FOCUSED ON YOU.",
+    "ar": "من رأس الخيمة. اهتمامنا بك."
+  },
+  "heroTitle": {
+    "en": "Your next chapter.",
+    "ar": "فصلك القادم."
+  },
+  "heroEm": {
+    "en": "Financed thoughtfully.",
+    "ar": "بتمويل مدروس."
+  },
+  "heroText": {
+    "en": "Loans, mortgages and business finance in Ras Al Khaimah, handled for you.",
+    "ar": "القروض والتمويل العقاري وتمويل الأعمال في رأس الخيمة، نساعدك في كل خطوة."
+  },
+  "startChat": {
+    "en": "Let’s talk on WhatsApp ↗",
+    "ar": "لنتحدث عبر واتساب ↖"
+  },
+  "checkEligibility": {
+    "en": "Check my eligibility →",
+    "ar": "تحقق من أهليتي ←"
+  },
+  "proof1": {
+    "en": "PLACEHOLDER: service credentials",
+    "ar": "محتوى مؤقت: مؤهلات الخدمة"
+  },
+  "proof2": {
+    "en": "PLACEHOLDER: experience",
+    "ar": "محتوى مؤقت: الخبرة"
+  },
+  "proof3": {
+    "en": "PLACEHOLDER: client outcomes",
+    "ar": "محتوى مؤقت: نتائج العملاء"
+  },
+  "heroAdvisory": {
+    "en": "Independent guidance. Personal attention.",
+    "ar": "إرشاد مستقل. اهتمام شخصي."
+  },
+  "explore": {
+    "en": "SCROLL TO EXPLORE ↓",
+    "ar": "مرّر للاستكشاف ↓"
+  },
+  "licensed": {
+    "en": "PLACEHOLDER: licensed / registered",
+    "ar": "محتوى مؤقت: الترخيص / التسجيل"
+  },
+  "sharia": {
+    "en": "Sharia-compliant options available",
+    "ar": "تتوفر خيارات متوافقة مع الشريعة"
+  },
+  "bilingual": {
+    "en": "Arabic & English support",
+    "ar": "دعم بالعربية والإنجليزية"
+  },
+  "always": {
+    "en": "24/7 contact · confirmation pending",
+    "ar": "تواصل على مدار الساعة · بانتظار التأكيد"
+  },
+  "serviceseyebrow": {
+    "en": "01 / OUR SERVICES",
+    "ar": "٠١ / خدماتنا"
+  },
+  "servicestitle": {
+    "en": "Different ambitions. One trusted starting point.",
+    "ar": "طموحات مختلفة. نقطة بداية موثوقة."
+  },
+  "servicesdesc": {
+    "en": "A home, a new venture, or a little more breathing room. Let’s find a way forward.",
+    "ar": "منزل، مشروع جديد، أو مرونة مالية أكبر. لنجد معاً طريقاً للمضي قدماً."
+  },
+  "servicesNote": {
+    "en": "ADVISORY & INTERMEDIARY SERVICES",
+    "ar": "خدمات استشارية ووساطة"
+  },
+  "service0": {
+    "en": "Real estate financing",
+    "ar": "التمويل العقاري"
+  },
+  "benefit0": {
+    "en": "A place to call your own.",
+    "ar": "خطوتك نحو منزل خاص بك."
+  },
+  "who0": {
+    "en": "For homebuyers & property owners",
+    "ar": "لمشتري المنازل ومالكي العقارات"
+  },
+  "learn": {
+    "en": "Explore service ↗",
+    "ar": "استكشف الخدمة ↖"
+  },
+  "service1": {
+    "en": "Salary financing",
+    "ar": "تمويل الراتب"
+  },
+  "benefit1": {
+    "en": "Make room for what’s next.",
+    "ar": "مساحة أكبر لخطوتك القادمة."
+  },
+  "who1": {
+    "en": "For salaried professionals",
+    "ar": "للموظفين ذوي الرواتب"
+  },
+  "service2": {
+    "en": "Project financing",
+    "ar": "تمويل المشاريع"
+  },
+  "benefit2": {
+    "en": "Give your ambition a foundation.",
+    "ar": "امنح طموحك أساساً متيناً."
+  },
+  "who2": {
+    "en": "For businesses & entrepreneurs",
+    "ar": "للشركات ورواد الأعمال"
+  },
+  "service3": {
+    "en": "Open a bank account",
+    "ar": "فتح حساب مصرفي"
+  },
+  "benefit3": {
+    "en": "A clear start to everyday banking.",
+    "ar": "بداية واضحة للخدمات المصرفية اليومية."
+  },
+  "who3": {
+    "en": "For individuals & businesses",
+    "ar": "للأفراد والشركات"
+  },
+  "service4": {
+    "en": "Personal loan",
+    "ar": "قرض شخصي"
+  },
+  "benefit4": {
+    "en": "Move forward with clarity.",
+    "ar": "تقدّم بخطوات واضحة."
+  },
+  "who4": {
+    "en": "For individual financing needs",
+    "ar": "للاحتياجات التمويلية الشخصية"
+  },
+  "service5": {
+    "en": "NafIs",
+    "ar": "نافس"
+  },
+  "benefit5": {
+    "en": "Personal loan",
+    "ar": "قرض شخصي"
+  },
+  "who5": {
+    "en": "Product label needs confirmation",
+    "ar": "اسم المنتج يحتاج إلى تأكيد"
+  },
+  "processeyebrow": {
+    "en": "02 / THE PROCESS",
+    "ar": "٠٢ / آلية العمل"
+  },
+  "processtitle": {
+    "en": "A clear path. At every step.",
+    "ar": "مسار واضح. في كل خطوة."
+  },
+  "processdesc": {
+    "en": "Less uncertainty. More understanding. We help you navigate the details.",
+    "ar": "غموض أقل وفهم أكبر. نساعدك على التعامل مع التفاصيل."
+  },
+  "step0": {
+    "en": "Tell us your need",
+    "ar": "أخبرنا باحتياجك"
+  },
+  "stepdesc0": {
+    "en": "A conversation about your goals and circumstances.",
+    "ar": "حوار حول أهدافك وظروفك."
+  },
+  "step1": {
+    "en": "We compare options",
+    "ar": "نقارن الخيارات"
+  },
+  "stepdesc1": {
+    "en": "We help you understand relevant financing pathways.",
+    "ar": "نساعدك على فهم مسارات التمويل المناسبة."
+  },
+  "step2": {
+    "en": "We prepare and submit",
+    "ar": "نجهز ونقدم"
+  },
+  "stepdesc2": {
+    "en": "Guidance through the paperwork and application.",
+    "ar": "إرشاد خلال تجهيز المستندات وتقديم الطلب."
+  },
+  "step3": {
+    "en": "You get your decision",
+    "ar": "تتلقى القرار"
+  },
+  "stepdesc3": {
+    "en": "The provider reviews and decides. We explain the next steps.",
+    "ar": "تراجع الجهة المقدمة الطلب وتتخذ القرار. نوضح لك الخطوات التالية."
+  },
+  "calceyebrow": {
+    "en": "03 / PLAN AHEAD",
+    "ar": "٠٣ / خطط للمستقبل"
+  },
+  "calctitle": {
+    "en": "A little clarity,\na lot of possibility.",
+    "ar": "وضوح أكبر،\nوإمكانيات أوسع."
+  },
+  "calcdesc": {
+    "en": "Explore what a monthly payment could look like. A starting point for a conversation, never a commitment.",
+    "ar": "استكشف قيمة القسط الشهري المحتمل. نقطة بداية للحوار، وليست التزاماً."
+  },
+  "illustrative": {
+    "en": "Illustrative, not an offer",
+    "ar": "للتوضيح فقط، وليس عرضاً"
+  },
+  "personalTab": {
+    "en": "Personal / Salary loan",
+    "ar": "قرض شخصي / تمويل الراتب"
+  },
+  "mortgageTab": {
+    "en": "Mortgage",
+    "ar": "تمويل عقاري"
+  },
+  "amountlabel": {
+    "en": "Financing amount",
+    "ar": "مبلغ التمويل"
+  },
+  "yearslabel": {
+    "en": "Repayment period",
+    "ar": "مدة السداد"
+  },
+  "ratelabel": {
+    "en": "Illustrative annual rate",
+    "ar": "معدل سنوي توضيحي"
+  },
+  "monthly": {
+    "en": "ESTIMATED MONTHLY PAYMENT",
+    "ar": "القسط الشهري التقديري"
+  },
+  "totalInterest": {
+    "en": "Total interest",
+    "ar": "إجمالي الفائدة"
+  },
+  "totalPayment": {
+    "en": "Total repayment",
+    "ar": "إجمالي السداد"
+  },
+  "calcCaveat": {
+    "en": "Reducing-balance estimate. Excludes fees, insurance and provider-specific terms. Rates are illustrative assumptions; actual offers may differ.",
+    "ar": "تقدير على أساس الرصيد المتناقص. لا يشمل الرسوم أو التأمين أو شروط الجهة المقدمة. المعدلات افتراضية وقد تختلف العروض الفعلية."
+  },
+  "sendResult": {
+    "en": "Discuss this estimate on WhatsApp ↗",
+    "ar": "ناقش هذا التقدير عبر واتساب ↖"
+  },
+  "eligibleeyebrow": {
+    "en": "04 / YOUR NEXT STEP",
+    "ar": "٠٤ / خطوتك القادمة"
+  },
+  "eligibletitle": {
+    "en": "Let’s start with you.",
+    "ar": "لنبدأ بك."
+  },
+  "eligibledesc": {
+    "en": "Four simple questions to prepare your enquiry. This does not determine eligibility or create an application.",
+    "ar": "أربعة أسئلة بسيطة لإعداد استفسارك. لا يحدد ذلك الأهلية ولا يُنشئ طلباً."
+  },
+  "back": {
+    "en": "← Back",
+    "ar": "رجوع →"
+  },
+  "continue": {
+    "en": "Continue →",
+    "ar": "متابعة ←"
+  },
+  "localOnly": {
+    "en": "Private by design: your answers stay in this page. WhatsApp opens only when you choose to send.",
+    "ar": "إجاباتك تبقى في هذه الصفحة. يُفتح واتساب فقط عندما تختار الإرسال."
+  },
+  "partnerTitle": {
+    "en": "A place for future partnerships.",
+    "ar": "مساحة للشراكات المستقبلية."
+  },
+  "partnerNote": {
+    "en": "PLACEHOLDER: needs client input. No bank affiliations are asserted.",
+    "ar": "محتوى مؤقت: يتطلب معلومات من العميل. لا يتم تأكيد أي ارتباطات مصرفية."
+  },
+  "partner1": {
+    "en": "Partner bank 1",
+    "ar": "بنك شريك 1"
+  },
+  "partner2": {
+    "en": "Partner bank 2",
+    "ar": "بنك شريك 2"
+  },
+  "partner3": {
+    "en": "Partner bank 3",
+    "ar": "بنك شريك 3"
+  },
+  "partner4": {
+    "en": "Partner bank 4",
+    "ar": "بنك شريك 4"
+  },
+  "partner5": {
+    "en": "Partner bank 5",
+    "ar": "بنك شريك 5"
+  },
+  "partner6": {
+    "en": "Partner bank 6",
+    "ar": "بنك شريك 6"
+  },
+  "partner7": {
+    "en": "Partner bank 7",
+    "ar": "بنك شريك 7"
+  },
+  "partner8": {
+    "en": "Partner bank 8",
+    "ar": "بنك شريك 8"
+  },
+  "abouteyebrow": {
+    "en": "05 / ABOUT AL SHAHIN",
+    "ar": "٠٥ / عن الشاهين"
+  },
+  "abouttitle": {
+    "en": "Local understanding.\nA wider perspective.",
+    "ar": "فهم محلي.\nورؤية أوسع."
+  },
+  "aboutStory": {
+    "en": "Based in Ras Al Khaimah, Al Shahin Banking Services and Consultations supports individuals and businesses with banking guidance and financial consultations. Our approach brings tailored services and expert advice to the decisions that matter to you.",
+    "ar": "تقدم الشاهين للخدمات والاستشارات المصرفية في رأس الخيمة إرشاداً مصرفياً واستشارات مالية للأفراد والشركات. يجمع نهجنا بين الخدمات المصممة وفق احتياجاتك والمشورة المتخصصة للقرارات المهمة لك."
+  },
+  "areasTitle": {
+    "en": "A conversation that covers more.",
+    "ar": "حوار يغطي المزيد."
+  },
+  "area0": {
+    "en": "Personal Accounts",
+    "ar": "الحسابات الشخصية"
+  },
+  "area1": {
+    "en": "Personal Loans & Financing",
+    "ar": "القروض والتمويل الشخصي"
+  },
+  "area2": {
+    "en": "Credit Cards",
+    "ar": "بطاقات الائتمان"
+  },
+  "area3": {
+    "en": "Business Accounts",
+    "ar": "حسابات الأعمال"
+  },
+  "area4": {
+    "en": "Business Loans & Financing",
+    "ar": "قروض وتمويل الأعمال"
+  },
+  "area5": {
+    "en": "Cash Management",
+    "ar": "إدارة النقد"
+  },
+  "area6": {
+    "en": "Trade Finance",
+    "ar": "التمويل التجاري"
+  },
+  "area7": {
+    "en": "Business Financial Consulting",
+    "ar": "الاستشارات المالية للأعمال"
+  },
+  "area8": {
+    "en": "Risk Management",
+    "ar": "إدارة المخاطر"
+  },
+  "area9": {
+    "en": "Islamic / Sharia-compliant financing",
+    "ar": "التمويل الإسلامي والمتوافق مع الشريعة"
+  },
+  "area10": {
+    "en": "Digital / Online banking and payments",
+    "ar": "الخدمات المصرفية والمدفوعات الرقمية"
+  },
+  "teamTitle": {
+    "en": "People behind the guidance.",
+    "ar": "فريق الإرشاد."
+  },
+  "teamNote": {
+    "en": "Meet the team · content pending",
+    "ar": "تعرّف على الفريق · المحتوى قيد الانتظار"
+  },
+  "teamPlaceholder": {
+    "en": "PLACEHOLDER: needs client input",
+    "ar": "محتوى مؤقت: يتطلب معلومات من العميل"
+  },
+  "teamDetails": {
+    "en": "Name, role, approved portrait and biography",
+    "ar": "الاسم والدور والصورة المعتمدة والسيرة الذاتية"
+  },
+  "voices": {
+    "en": "CLIENT VOICES",
+    "ar": "أصوات العملاء"
+  },
+  "reviewTitle": {
+    "en": "Trust is personal.",
+    "ar": "الثقة علاقة شخصية."
+  },
+  "googleReviews": {
+    "en": "Read our Google reviews ↗",
+    "ar": "اقرأ مراجعاتنا على Google ↖"
+  },
+  "faqeyebrow": {
+    "en": "06 / YOUR QUESTIONS",
+    "ar": "٠٦ / أسئلتك"
+  },
+  "faqtitle": {
+    "en": "Good questions. Clear beginnings.",
+    "ar": "أسئلة جيدة. بدايات واضحة."
+  },
+  "faqDraft": {
+    "en": "Draft guidance · all answers need client review",
+    "ar": "إرشادات أولية · جميع الإجابات تحتاج إلى مراجعة العميل"
+  },
+  "faqQ0": {
+    "en": "Is Al Shahin a bank?",
+    "ar": "هل الشاهين بنك؟"
+  },
+  "faqA0": {
+    "en": "No. This mock describes an advisory and intermediary service. Banks and financing providers make their own decisions and set their terms. The final disclosure needs client approval.",
+    "ar": "لا. يصف هذا النموذج خدمة استشارية ووساطة. تتخذ البنوك وجهات التمويل قراراتها وتحدد شروطها. يتطلب الإفصاح النهائي موافقة العميل."
+  },
+  "faqQ1": {
+    "en": "Which documents might I need?",
+    "ar": "ما المستندات التي قد أحتاجها؟"
+  },
+  "faqA1": {
+    "en": "Providers commonly request identification, residency details, income evidence and bank statements. Business requests may require company documents. The exact checklist depends on the provider and service.",
+    "ar": "تطلب الجهات المقدمة عادةً إثبات الهوية والإقامة والدخل وكشوف الحساب. قد تتطلب طلبات الأعمال مستندات الشركة. تعتمد القائمة الدقيقة على الجهة والخدمة."
+  },
+  "faqQ2": {
+    "en": "Are Islamic financing options available?",
+    "ar": "هل تتوفر خيارات تمويل إسلامي؟"
+  },
+  "faqA2": {
+    "en": "Sharia-compliant options are listed among the service areas. Ask about the available structure, fees and terms; product suitability and availability must be confirmed.",
+    "ar": "تندرج الخيارات المتوافقة مع الشريعة ضمن مجالات الخدمة. استفسر عن الهيكل والرسوم والشروط، ويجب تأكيد توفر المنتج وملاءمته."
+  },
+  "faqQ3": {
+    "en": "Will I need to transfer my salary?",
+    "ar": "هل يلزم تحويل راتبي؟"
+  },
+  "faqA3": {
+    "en": "Salary-transfer requirements vary by provider and product. Review the relevant conditions before making a decision.",
+    "ar": "تختلف متطلبات تحويل الراتب حسب الجهة والمنتج. راجع الشروط ذات الصلة قبل اتخاذ القرار."
+  },
+  "faqQ4": {
+    "en": "Does an enquiry guarantee approval?",
+    "ar": "هل يضمن الاستفسار الموافقة؟"
+  },
+  "faqA4": {
+    "en": "No. Approval depends on the provider’s assessment, documentation and eligibility criteria. A calculator result or this mini-flow is not an approval.",
+    "ar": "لا. تعتمد الموافقة على تقييم الجهة المقدمة والمستندات ومعايير الأهلية. نتيجة الحاسبة أو هذا النموذج ليست موافقة."
+  },
+  "faqQ5": {
+    "en": "Can you help with business financing?",
+    "ar": "هل تساعدون في تمويل الأعمال؟"
+  },
+  "faqA5": {
+    "en": "Business and project financing guidance is listed as a service. Discuss the purpose of funding, company information and documentation with the adviser.",
+    "ar": "الإرشاد بشأن تمويل الأعمال والمشاريع مدرج ضمن الخدمات. ناقش الغرض من التمويل ومعلومات الشركة والمستندات مع المستشار."
+  },
+  "faqQ6": {
+    "en": "Are the calculator figures an offer?",
+    "ar": "هل أرقام الحاسبة عرض تمويل؟"
+  },
+  "faqA6": {
+    "en": "No. Figures are illustrative, not an offer. The estimate excludes fees and insurance. Actual pricing, structures and repayment schedules depend on the provider.",
+    "ar": "لا. الأرقام توضيحية وليست عرضاً. لا يشمل التقدير الرسوم والتأمين. تعتمد الأسعار والهياكل وجداول السداد الفعلية على الجهة المقدمة."
+  },
+  "faqQ7": {
+    "en": "How do I get in touch?",
+    "ar": "كيف أتواصل معكم؟"
+  },
+  "faqA7": {
+    "en": "Use the listed WhatsApp number, phone or email. This review mock does not submit forms or request callbacks automatically. Office visits and contact hours should be confirmed.",
+    "ar": "استخدم رقم واتساب أو الهاتف أو البريد المدرج. لا يرسل هذا النموذج الاستمارات ولا يطلب معاودة الاتصال تلقائياً. يجب تأكيد الزيارات وأوقات التواصل."
+  },
+  "contacteyebrow": {
+    "en": "07 / LET’S TALK",
+    "ar": "٠٧ / لنتحدث"
+  },
+  "contacttitle": {
+    "en": "Your plans deserve\na conversation.",
+    "ar": "خططك تستحق\nحواراً."
+  },
+  "contactDesc": {
+    "en": "Start with a question. We’ll help you understand your next step.",
+    "ar": "ابدأ بسؤال. نساعدك على فهم خطوتك التالية."
+  },
+  "verify": {
+    "en": "NEEDS VERIFICATION",
+    "ar": "يحتاج إلى التحقق"
+  },
+  "hours": {
+    "en": "We work 24/7 · needs client confirmation",
+    "ar": "نعمل على مدار الساعة · يحتاج إلى تأكيد العميل"
+  },
+  "mapLabel": {
+    "en": "MAP PLACEHOLDER: needs client input",
+    "ar": "خريطة مؤقتة: تتطلب معلومات من العميل"
+  },
+  "address": {
+    "en": "Julphar Tower, Office 1001, Floor 10, Ras Al Khaimah (RAK), UAE",
+    "ar": "برج جلفار، مكتب ١٠٠١، الطابق العاشر، رأس الخيمة، الإمارات العربية المتحدة"
+  },
+  "contactWhatsApp": {
+    "en": "Continue on WhatsApp ↗",
+    "ar": "تابع عبر واتساب ↖"
+  },
+  "formTitle": {
+    "en": "Let’s get acquainted.",
+    "ar": "لنتعرف عليك."
+  },
+  "formNote": {
+    "en": "Demo form only. Nothing is collected or sent.",
+    "ar": "نموذج تجريبي فقط. لا يتم جمع أو إرسال أي معلومات."
+  },
+  "fieldname": {
+    "en": "Your name",
+    "ar": "اسمك"
+  },
+  "fieldphone": {
+    "en": "Phone number",
+    "ar": "رقم الهاتف"
+  },
+  "fieldService": {
+    "en": "Service of interest",
+    "ar": "الخدمة المطلوبة"
+  },
+  "choose": {
+    "en": "Choose an option",
+    "ar": "اختر خياراً"
+  },
+  "fieldLanguage": {
+    "en": "Preferred language",
+    "ar": "اللغة المفضلة"
+  },
+  "fieldTime": {
+    "en": "Best time to contact you",
+    "ar": "أفضل وقت للتواصل"
+  },
+  "time0": {
+    "en": "Morning",
+    "ar": "صباحاً"
+  },
+  "time1": {
+    "en": "Afternoon",
+    "ar": "بعد الظهر"
+  },
+  "time2": {
+    "en": "Evening",
+    "ar": "مساءً"
+  },
+  "fieldMessage": {
+    "en": "How can we help? (optional)",
+    "ar": "كيف يمكننا مساعدتك؟ (اختياري)"
+  },
+  "consent": {
+    "en": "I understand this is a demo and no callback will be requested. Privacy policy: PLACEHOLDER, needs client input.",
+    "ar": "أفهم أن هذا نموذج تجريبي ولن يتم طلب معاودة الاتصال. سياسة الخصوصية: محتوى مؤقت يتطلب معلومات من العميل."
+  },
+  "submit": {
+    "en": "Preview my enquiry →",
+    "ar": "معاينة استفساري ←"
+  },
+  "footerLine": {
+    "en": "Clarity for your next financial chapter.",
+    "ar": "وضوح لفصلك المالي القادم."
+  },
+  "disclosure": {
+    "en": "Disclosure — PLACEHOLDER: needs client input. Advisory and intermediary service; not a bank. Financing and account decisions rest with the relevant provider, subject to its checks and terms.",
+    "ar": "الإفصاح — محتوى مؤقت: يتطلب معلومات من العميل. خدمة استشارية ووساطة وليست بنكاً. تعود قرارات التمويل والحسابات إلى الجهة المقدمة وفقاً لإجراءاتها وشروطها."
+  },
+  "mock": {
+    "en": "CLIENT REVIEW MOCK · NOT A LIVE SERVICE",
+    "ar": "نموذج لمراجعة العميل · ليس خدمة فعلية"
+  },
+  "backServices": {
+    "en": "← All services",
+    "ar": "جميع الخدمات →"
+  },
+  "detailEyebrow": {
+    "en": "FINANCIAL GUIDANCE / RAS AL KHAIMAH",
+    "ar": "الإرشاد المالي / رأس الخيمة"
+  },
+  "detailLine0": {
+    "en": "A place to call your own.",
+    "ar": "خطوتك نحو منزل خاص بك."
+  },
+  "detailDesc0": {
+    "en": "Explore mortgage pathways and the documents a lender may ask for. We help you make sense of the next step.",
+    "ar": "استكشف خيارات التمويل العقاري والمستندات التي قد يطلبها الممول. نساعدك على فهم الخطوة التالية."
+  },
+  "discussService": {
+    "en": "Discuss your needs ↗",
+    "ar": "ناقش احتياجاتك ↖"
+  },
+  "whoHeading": {
+    "en": "Who it’s for",
+    "ar": "لمن هذه الخدمة؟"
+  },
+  "detailDraft": {
+    "en": "Draft service description: needs client review. Product scope, provider availability and advisory fees must be confirmed.",
+    "ar": "وصف أولي للخدمة: يحتاج إلى مراجعة العميل. يجب تأكيد نطاق المنتج وتوفر الجهات المقدمة ورسوم الاستشارة."
+  },
+  "prepare": {
+    "en": "Prepare for a useful conversation.",
+    "ar": "استعد لحوار مفيد."
+  },
+  "prep0": {
+    "en": "Your goals and the amount you want to discuss",
+    "ar": "أهدافك والمبلغ الذي ترغب في مناقشته"
+  },
+  "prep1": {
+    "en": "Your income or business circumstances",
+    "ar": "دخلك أو ظروف نشاطك التجاري"
+  },
+  "prep2": {
+    "en": "Questions about repayment, fees and provider terms",
+    "ar": "أسئلتك عن السداد والرسوم وشروط الجهة المقدمة"
+  },
+  "prep3": {
+    "en": "Identification and supporting documents only when requested through an approved channel",
+    "ar": "الهوية والمستندات الداعمة فقط عند طلبها عبر قناة معتمدة"
+  },
+  "noDocs": {
+    "en": "Do not send sensitive documents through this review mock. A provider-specific checklist will be needed.",
+    "ar": "لا ترسل مستندات حساسة عبر هذا النموذج. ستكون هناك حاجة إلى قائمة مستندات خاصة بالجهة المقدمة."
+  },
+  "ready": {
+    "en": "A clear next step starts here.",
+    "ar": "خطوة تالية واضحة تبدأ هنا."
+  },
+  "approval": {
+    "en": "No approval, pricing or timing is guaranteed. Final decisions and terms belong to the provider.",
+    "ar": "لا يوجد ضمان للموافقة أو الأسعار أو المدة. تعود القرارات والشروط النهائية للجهة المقدمة."
+  },
+  "detailLine1": {
+    "en": "Make room for what’s next.",
+    "ar": "مساحة أكبر لخطوتك القادمة."
+  },
+  "detailDesc1": {
+    "en": "Understand salary-linked financing, repayment considerations and the information needed to discuss your options.",
+    "ar": "تعرّف على التمويل المرتبط بالراتب واعتبارات السداد والمعلومات اللازمة لمناقشة خياراتك."
+  },
+  "detailLine2": {
+    "en": "Give your ambition a foundation.",
+    "ar": "امنح طموحك أساساً متيناً."
+  },
+  "detailDesc2": {
+    "en": "Bring your business plans and funding needs into focus, with support organising a financing enquiry.",
+    "ar": "حدد خطط عملك واحتياجاتك التمويلية بوضوح، مع الدعم في تنظيم طلب التمويل."
+  },
+  "detailLine3": {
+    "en": "A clear start to everyday banking.",
+    "ar": "بداية واضحة للخدمات المصرفية اليومية."
+  },
+  "detailDesc3": {
+    "en": "Get guidance on account types and preparing an application. Account opening is subject to the bank’s checks.",
+    "ar": "احصل على إرشاد بشأن أنواع الحسابات وتجهيز الطلب. يخضع فتح الحساب لإجراءات التحقق لدى البنك."
+  },
+  "detailLine4": {
+    "en": "Move forward with clarity.",
+    "ar": "تقدّم بخطوات واضحة."
+  },
+  "detailDesc4": {
+    "en": "Discuss personal financing needs and the practical considerations around affordability, documentation and repayment.",
+    "ar": "ناقش احتياجات التمويل الشخصي والاعتبارات العملية المتعلقة بالقدرة على السداد والمستندات والأقساط."
+  },
+  "nafisNote": {
+    "en": "PLACEHOLDER: needs client input. The live-site card is labelled “NafIs” and captioned “Personal loan”. Product identity and any connection to an external programme are unverified.",
+    "ar": "محتوى مؤقت: يتطلب معلومات من العميل. البطاقة على الموقع معنونة «نافس» ووصفها «قرض شخصي». لم يتم التحقق من هوية المنتج أو علاقته بأي برنامج خارجي."
+  },
+  "yearsUnit": {
+    "en": "years",
+    "ar": "سنوات"
+  },
+  "stepOf": {
+    "en": "Question {n} of 4",
+    "ar": "السؤال {n} من ٤"
+  },
+  "flowQ0": {
+    "en": "What would you like help with?",
+    "ar": "ما الخدمة التي تحتاج مساعدة بشأنها؟"
+  },
+  "flowQ1": {
+    "en": "How would you describe your employment?",
+    "ar": "كيف تصف وضعك الوظيفي؟"
+  },
+  "flowQ2": {
+    "en": "What is your monthly income band?",
+    "ar": "ما فئة دخلك الشهري؟"
+  },
+  "flowQ3": {
+    "en": "Which language do you prefer?",
+    "ar": "ما اللغة التي تفضلها؟"
+  },
+  "employed": {
+    "en": "Salaried employee",
+    "ar": "موظف براتب"
+  },
+  "self": {
+    "en": "Self-employed / business owner",
+    "ar": "عمل حر / صاحب شركة"
+  },
+  "otherEmployment": {
+    "en": "Other / prefer to discuss",
+    "ar": "أخرى / أفضل المناقشة"
+  },
+  "income1": {
+    "en": "Below AED 5,000",
+    "ar": "أقل من ٥٬٠٠٠ درهم"
+  },
+  "income2": {
+    "en": "AED 5,000–10,000",
+    "ar": "٥٬٠٠٠–١٠٬٠٠٠ درهم"
+  },
+  "income3": {
+    "en": "AED 10,001–20,000",
+    "ar": "١٠٬٠٠١–٢٠٬٠٠٠ درهم"
+  },
+  "income4": {
+    "en": "Above AED 20,000",
+    "ar": "أكثر من ٢٠٬٠٠٠ درهم"
+  },
+  "english": {
+    "en": "English",
+    "ar": "الإنجليزية"
+  },
+  "arabic": {
+    "en": "Arabic",
+    "ar": "العربية"
+  },
+  "flowSummary": {
+    "en": "Your conversation starter.",
+    "ar": "بداية حوارك."
+  },
+  "flowDisclaimer": {
+    "en": "This is an enquiry summary, not an eligibility decision. Nothing has been sent.",
+    "ar": "هذا ملخص استفسار وليس قرار أهلية. لم يتم إرسال أي شيء."
+  },
+  "flowSend": {
+    "en": "Request a callback via WhatsApp ↗",
+    "ar": "اطلب معاودة الاتصال عبر واتساب ↖"
+  },
+  "restart": {
+    "en": "Start again",
+    "ar": "ابدأ من جديد"
+  },
+  "review0": {
+    "en": "PLACEHOLDER: needs client input — approved client review, attribution and consent.",
+    "ar": "محتوى مؤقت: يتطلب مراجعة عميل معتمدة مع بيانات صاحبها وموافقته."
+  },
+  "review1": {
+    "en": "PLACEHOLDER: needs client input — a second verified review and permission to publish.",
+    "ar": "محتوى مؤقت: يتطلب مراجعة ثانية موثقة وإذن النشر."
+  },
+  "review2": {
+    "en": "PLACEHOLDER: needs client input — a third verified review and permission to publish.",
+    "ar": "محتوى مؤقت: يتطلب مراجعة ثالثة موثقة وإذن النشر."
+  },
+  "reviewNote": {
+    "en": "No testimonial, rating or client identity is asserted.",
+    "ar": "لا يتم تأكيد أي شهادة أو تقييم أو هوية عميل."
+  },
+  "required": {
+    "en": "Please complete this field.",
+    "ar": "يرجى إكمال هذا الحقل."
+  },
+  "phoneError": {
+    "en": "Enter a valid phone number (7–15 digits).",
+    "ar": "أدخل رقم هاتف صحيحاً (٧–١٥ رقماً)."
+  },
+  "consentError": {
+    "en": "Please acknowledge the demo notice.",
+    "ar": "يرجى الإقرار بإشعار النموذج التجريبي."
+  },
+  "formSuccess": {
+    "en": "Demo enquiry validated. Nothing was sent or saved, and no callback was requested. You can contact us directly on WhatsApp.",
+    "ar": "تم التحقق من الاستفسار التجريبي. لم يتم إرسال أو حفظ أي معلومات ولم تُطلب معاودة الاتصال. يمكنك التواصل معنا مباشرة عبر واتساب."
+  },
+  "waIntro": {
+    "en": "Hello Al Shahin, I would like to discuss this illustrative estimate, not an offer.",
+    "ar": "مرحباً الشاهين، أرغب في مناقشة هذا التقدير التوضيحي، وهو ليس عرضاً."
+  },
+  "waFlow": {
+    "en": "Hello Al Shahin, I would like to request a callback about this enquiry (not an application or approval).",
+    "ar": "مرحباً الشاهين، أرغب في طلب معاودة الاتصال بشأن هذا الاستفسار (ليس طلب تمويل أو موافقة)."
+  },
+  "imageFallback": {
+    "en": "Service illustration placeholder",
+    "ar": "رسم توضيحي مؤقت للخدمة"
+  },
+  "menuOpen": {
+    "en": "Open menu",
+    "ar": "افتح القائمة"
+  },
+  "menuClose": {
+    "en": "Close menu",
+    "ar": "أغلق القائمة"
+  },
+  "mainNav": {
+    "en": "Main navigation",
+    "ar": "التنقل الرئيسي"
+  },
+  "previousReview": {
+    "en": "Previous review",
+    "ar": "المراجعة السابقة"
+  },
+  "nextReview": {
+    "en": "Next review",
+    "ar": "المراجعة التالية"
+  },
+  "chartLabel": {
+    "en": "Outstanding principal falls over the repayment period",
+    "ar": "يتناقص أصل الدين المتبقي خلال فترة السداد"
+  },
+  "amountUnit": {
+    "en": "AED",
+    "ar": "درهم"
+  },
+  "loanType": {
+    "en": "Financing type",
+    "ar": "نوع التمويل"
+  },
+  "period": {
+    "en": "Period",
+    "ar": "المدة"
+  },
+  "annualRate": {
+    "en": "Annual rate",
+    "ar": "المعدل السنوي"
+  },
+  "estimateLabel": {
+    "en": "Monthly estimate",
+    "ar": "التقدير الشهري"
+  },
+  "homeLabel": {
+    "en": "Home",
+    "ar": "الرئيسية"
+  },
+  "languageSwitch": {
+    "en": "Switch to Arabic",
+    "ar": "التبديل إلى الإنجليزية"
+  },
+  "callLabel": {
+    "en": "Call",
+    "ar": "اتصل على"
+  },
+  "floatingLabel": {
+    "en": "Chat on WhatsApp",
+    "ar": "تحدث عبر واتساب"
+  },
+  "serviceRailLabel": {
+    "en": "Services: scroll horizontally or follow service links",
+    "ar": "الخدمات: مرّر أفقياً أو اتبع روابط الخدمات"
+  },
+  "backToTop": {
+    "en": "Back to top",
+    "ar": "العودة إلى الأعلى"
+  },
+  "enableMotion": {
+    "en": "Enable full motion",
+    "ar": "تفعيل الحركة الكاملة"
+  },
+  "reduceMotion": {
+    "en": "Reduce motion",
+    "ar": "تقليل الحركة"
+  },
+  "motionFull": {
+    "en": "Full motion",
+    "ar": "حركة كاملة"
+  },
+  "motionReduced": {
+    "en": "Reduced motion",
+    "ar": "حركة مخففة"
+  }
+}
