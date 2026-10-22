@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Al Shahin — React + Node/Express review mock
 
 The same bilingual Al Shahin experience, rebuilt with **React 19**, **Node.js** and **Express 5**. Vite handles JSX, development updates and production assets. There is no Python dependency or tooling.
@@ -79,3 +80,6 @@ npm test
 Tests run actual React components in jsdom, check all six views and local links/assets, and exercise calculators, Arabic, routing, enquiry, validation, image fallback and review/menu controls. Express tests verify production deep links, assets, health, 404s and rejection of submissions. Production tests require a current build.
 
 No browser was connected for visual QA. jsdom cannot verify real GSAP/pinning, screen-reader behaviour, device layouts or Lighthouse. The 85+ mobile performance score remains a target. React overhead changes the original plain-JavaScript budget; consult Vite output for measured bundle sizes.
+=======
+# Bank_app
+>>>>>>> a7c1449010e516c07e4a1a307e6fab7c45f3168d
