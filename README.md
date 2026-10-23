@@ -25,6 +25,8 @@ The server binds to loopback for local review. Configure production hosting, pro
 
 ## Included
 
+`src/premium-layout.css` is the final responsive layout layer: shared 1360px content alignment, consistent section rhythm, balanced typography, aligned forms and cards, and mobile/RTL refinements. All five detail routes now use `src/components/ServiceDetail.jsx` with metadata from `src/content/services.js`; existing copy and posters remain unchanged. Related-service navigation and matching contact/WhatsApp actions provide a consistent path through every service page.
+
 All CSS font sizes are increased by 20%, with a minimum of 12px for the smallest captions. `src/typography.css` adds wrapping and spacing for larger labels, mobile menus and form controls. Text embedded in the supplied poster images is part of the artwork and is not resized independently.
 
 The contact section contains a lazy-loaded Google Maps iframe in a glass card, with an office-address caption and an external “Open in Google Maps” link. The public query embed needs no API key or Maps JavaScript SDK. The `useOfficeMap` hook switches the map language with the page. Google serves the map externally; the exact business marker should be checked during live browser review.

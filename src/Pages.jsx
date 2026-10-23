@@ -2,6 +2,9 @@ import React from 'react';
 import { T, SourceImage, TiltCard, useLanguage } from './components/UI.jsx';
 import { Calculator, Eligibility, Reviews, ContactForm } from './components/Widgets.jsx';
 import ContactMap from './components/ContactMap.jsx';
+import AboutUs from './components/AboutUs.jsx';
+import ServiceDetail from './components/ServiceDetail.jsx';
+import { services } from './content/services.js';
 function Hero() {
   return <section className="hero" aria-labelledby="hero-title">
 <div className="hero-grain" aria-hidden="true">
@@ -217,10 +220,8 @@ function Partners() {
 }
 function About() {
   return <section className="about-section section" id="about">
-<div className="about-art" aria-hidden="true">
-<span className="about-monogram">{"ش"}</span>
-<div className="about-art-text">{"RAS AL KHAIMAH"}<br />{"ROOTED HERE."}<br />{"LOOKING FORWARD."}</div>
-<span className="about-art-year">{"رؤية أوضح لغدك"}</span>
+<div className="about-art about-image" aria-hidden="true">
+<SourceImage src="/assets/local-understand-bg.png" alt="" width="1254" height="1254" loading="lazy" />
 </div>
 <div>
 <div className="section-heading reveal">
@@ -272,6 +273,7 @@ function Team() {
 }
 function ReviewsSection() {
   return <section className="reviews-section section" id="reviews">
+<SourceImage className="reviews-background" src="/assets/Trust-bg.png" alt="" width="1672" height="941" loading="lazy" aria-hidden="true" />
 <div className="reviews-heading">
 <p className="eyebrow">
 <T as="span" k="voices" />
@@ -390,6 +392,7 @@ export function Home() {
 <EligibilitySection />
 <Partners />
 <About />
+<AboutUs />
 <Team />
 <ReviewsSection />
 <FAQ />
@@ -438,232 +441,6 @@ export function Footer() {
 </div>
 </footer>;
 }
-function Service0() {
-  return <main id="main">
-<section className="detail-hero section">
-<div>
-<T as="a" k="backServices" className="text-link" href="/#services" />
-<T as="p" k="detailEyebrow" className="eyebrow" />
-<T as="h1" k="service3" />
-<T as="p" k="detailLine3" className="detail-lead" />
-<T as="p" k="detailDesc3" />
-<div className="hero-ctas">
-<T as="a" k="discussService" className="button" href="https://wa.me/971557010000" />
-<T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
-</div>
-</div>
-<div className="detail-art service-poster">
-<SourceImage src="/assets/4.png" alt="Open a bank account" altKey="service3" width="1024" height="1536" />
-</div>
-</section>
-<section className="detail-content section">
-<div>
-<T as="h2" k="whoHeading" />
-<T as="p" k="who3" />
-<T as="p" k="detailDraft" className="notice" />
-</div>
-<div>
-<T as="h2" k="prepare" />
-<ul className="detail-checklist">
-<T as="li" k="prep0" />
-<T as="li" k="prep1" />
-<T as="li" k="prep2" />
-<T as="li" k="prep3" />
-</ul>
-<T as="p" k="noDocs" className="fine-print" />
-</div>
-</section>
-<section className="detail-cta section">
-<T as="h2" k="ready" />
-<T as="a" k="startChat" className="button" href="https://wa.me/971557010000" />
-<T as="p" k="approval" className="fine-print" />
-</section>
-</main>;
-}
-function Service1() {
-  return <main id="main">
-<section className="detail-hero section">
-<div>
-<T as="a" k="backServices" className="text-link" href="/#services" />
-<T as="p" k="detailEyebrow" className="eyebrow" />
-<T as="h1" k="service4" />
-<T as="p" k="detailLine4" className="detail-lead" />
-<T as="p" k="detailDesc4" />
-<div className="hero-ctas">
-<T as="a" k="discussService" className="button" href="https://wa.me/971557010000" />
-<T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
-</div>
-</div>
-<div className="detail-art service-poster">
-<SourceImage src="/assets/6.png" alt="Personal loan" altKey="service4" width="1024" height="1536" />
-</div>
-</section>
-<section className="detail-content section">
-<div>
-<T as="h2" k="whoHeading" />
-<T as="p" k="who4" />
-<T as="p" k="detailDraft" className="notice" />
-</div>
-<div>
-<T as="h2" k="prepare" />
-<ul className="detail-checklist">
-<T as="li" k="prep0" />
-<T as="li" k="prep1" />
-<T as="li" k="prep2" />
-<T as="li" k="prep3" />
-</ul>
-<T as="p" k="noDocs" className="fine-print" />
-</div>
-</section>
-<section className="section nafis-block" id="nafis">
-<T as="h2" k="service5" />
-<T as="p" k="benefit5" />
-<T as="p" k="nafisNote" className="notice" />
-<div className="service-poster"><SourceImage src="/assets/5.png" alt="NafIs" altKey="service5" width="1024" height="1536" loading="lazy" /></div>
-</section>
-<section className="detail-cta section">
-<T as="h2" k="ready" />
-<T as="a" k="startChat" className="button" href="https://wa.me/971557010000" />
-<T as="p" k="approval" className="fine-print" />
-</section>
-</main>;
-}
-function Service2() {
-  return <main id="main">
-<section className="detail-hero section">
-<div>
-<T as="a" k="backServices" className="text-link" href="/#services" />
-<T as="p" k="detailEyebrow" className="eyebrow" />
-<T as="h1" k="service2" />
-<T as="p" k="detailLine2" className="detail-lead" />
-<T as="p" k="detailDesc2" />
-<div className="hero-ctas">
-<T as="a" k="discussService" className="button" href="https://wa.me/971557010000" />
-<T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
-</div>
-</div>
-<div className="detail-art service-poster">
-<SourceImage src="/assets/3.png" alt="Project financing" altKey="service2" width="1024" height="1536" />
-</div>
-</section>
-<section className="detail-content section">
-<div>
-<T as="h2" k="whoHeading" />
-<T as="p" k="who2" />
-<T as="p" k="detailDraft" className="notice" />
-</div>
-<div>
-<T as="h2" k="prepare" />
-<ul className="detail-checklist">
-<T as="li" k="prep0" />
-<T as="li" k="prep1" />
-<T as="li" k="prep2" />
-<T as="li" k="prep3" />
-</ul>
-<T as="p" k="noDocs" className="fine-print" />
-</div>
-</section>
-<section className="detail-cta section">
-<T as="h2" k="ready" />
-<T as="a" k="startChat" className="button" href="https://wa.me/971557010000" />
-<T as="p" k="approval" className="fine-print" />
-</section>
-</main>;
-}
-function Service3() {
-  return <main id="main">
-<section className="detail-hero section">
-<div>
-<T as="a" k="backServices" className="text-link" href="/#services" />
-<T as="p" k="detailEyebrow" className="eyebrow" />
-<T as="h1" k="service0" />
-<T as="p" k="detailLine0" className="detail-lead" />
-<T as="p" k="detailDesc0" />
-<div className="hero-ctas">
-<T as="a" k="discussService" className="button" href="https://wa.me/971557010000" />
-<T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
-</div>
-</div>
-<div className="detail-art service-poster">
-<SourceImage src="/assets/1.png" alt="Real estate financing" altKey="service0" width="1024" height="1536" />
-</div>
-</section>
-<section className="detail-content section">
-<div>
-<T as="h2" k="whoHeading" />
-<T as="p" k="who0" />
-<T as="p" k="detailDraft" className="notice" />
-</div>
-<div>
-<T as="h2" k="prepare" />
-<ul className="detail-checklist">
-<T as="li" k="prep0" />
-<T as="li" k="prep1" />
-<T as="li" k="prep2" />
-<T as="li" k="prep3" />
-</ul>
-<T as="p" k="noDocs" className="fine-print" />
-</div>
-</section>
-<section className="detail-cta section">
-<T as="h2" k="ready" />
-<T as="a" k="startChat" className="button" href="https://wa.me/971557010000" />
-<T as="p" k="approval" className="fine-print" />
-</section>
-</main>;
-}
-function Service4() {
-  return <main id="main">
-<section className="detail-hero section">
-<div>
-<T as="a" k="backServices" className="text-link" href="/#services" />
-<T as="p" k="detailEyebrow" className="eyebrow" />
-<T as="h1" k="service1" />
-<T as="p" k="detailLine1" className="detail-lead" />
-<T as="p" k="detailDesc1" />
-<div className="hero-ctas">
-<T as="a" k="discussService" className="button" href="https://wa.me/971557010000" />
-<T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
-</div>
-</div>
-<div className="detail-art service-poster">
-<SourceImage src="/assets/2.png" alt="Salary financing" altKey="service1" width="1024" height="1536" />
-</div>
-</section>
-<section className="detail-content section">
-<div>
-<T as="h2" k="whoHeading" />
-<T as="p" k="who1" />
-<T as="p" k="detailDraft" className="notice" />
-</div>
-<div>
-<T as="h2" k="prepare" />
-<ul className="detail-checklist">
-<T as="li" k="prep0" />
-<T as="li" k="prep1" />
-<T as="li" k="prep2" />
-<T as="li" k="prep3" />
-</ul>
-<T as="p" k="noDocs" className="fine-print" />
-</div>
-</section>
-<section className="detail-cta section">
-<T as="h2" k="ready" />
-<T as="a" k="startChat" className="button" href="https://wa.me/971557010000" />
-<T as="p" k="approval" className="fine-print" />
-</section>
-</main>;
-}
-const detailPages = {
-  "open-bank-account": Service0,
-  "personal-loan": Service1,
-  "project-financing": Service2,
-  "real-estate-financing": Service3,
-  "salary-financing": Service4
-};
-export function ServicePage({
-  slug
-}) {
-  const Page = detailPages[slug];
-  return Page ? <Page /> : <Home />;
+export function ServicePage({ slug }) {
+  return services.some(service => service.slug === slug) ? <ServiceDetail slug={slug} /> : <Home />;
 }

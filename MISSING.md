@@ -1,5 +1,20 @@
 # Content and production handover
 
+## Additional About us section
+
+| Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| Company profile / grouped service areas | Additional About us section after Local understanding | Introduction is draft copy based on the supplied business description. Service lists reuse the existing scope. Approve wording before production; no licensing or market-leadership claim is added. | Client |
+| Silver Coins and Payment Logos.png | About us image panel | Client-supplied asset contains Visa and Mastercard marks. Confirm image and trademark usage rights and intended context before production; its display does not verify partnerships or payment acceptance. | Client |
+
+## About and review background artwork
+
+| Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| local-understand-bg.png | About / Local understanding square card | Client-supplied image replaces the original blue monogram composition at a 1:1 ratio. Approve image rights, illustrated skyline and embedded wording; optimise the PNG for production. | Client |
+| رؤية أوضح لمستقبل أفضل | Embedded text in local-understand-bg.png | needs native review; supplied artwork remains in Arabic in both language modes. | Client |
+| Trust-bg.png | Trust is personal / reviews section | Client-supplied background with a dark readability overlay. Review production image rights and mobile crop. Existing review placeholders remain unchanged. | Client |
+
 ## Contact map integration
 
 | Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
@@ -347,3 +362,17 @@ The requested JavaScript stack supersedes the original build-free HTML requireme
 | افتح في خرائط جوجل ↖ | `openGoogleMaps` / contact map | needs native review | Client |
 
 Motion control update: the client requested removal of the Full/Reduced motion switch. Full animations now start automatically, and the previous control is no longer rendered.
+
+## About us Arabic copy
+
+| Item | Where it appears | Why it is needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| من نحن | `aboutUsTitle` / About us | needs native review | Client |
+| الشاهين للخدمات والاستشارات المصرفية | `aboutCompanyName` / About us | needs native review | Client |
+| نقدم من رأس الخيمة في دولة الإمارات العربية المتحدة إرشاداً مصرفياً واستشارات مالية للأفراد والشركات. ومن خلال الدعم المخصص والمشورة العملية، نساعد العملاء على فهم خياراتهم والاستعداد لاتخاذ قرارات مالية مدروسة. | `aboutUsIntro` / About us | needs native review | Client |
+| الخدمات المصرفية | `aboutPersonalGroup` / About us | needs native review | Client |
+| الحلول المصرفية | `aboutBusinessGroup` / About us | needs native review | Client |
+| الاستشارات المالية | `aboutAdvisoryGroup` / About us | needs native review | Client |
+| حلول مالية متوافقة مع الشريعة | `aboutIslamicGroup` / About us | needs native review | Client |
+| الخدمات المصرفية الرقمية | `aboutDigitalGroup` / About us | needs native review | Client |
+| تصميم مقدم من العميل للشاهين يتضمن عملات إماراتية فضية وشعاري فيزا وماستركارد | `aboutPaymentImageAlt` / About us | needs native review | Client |

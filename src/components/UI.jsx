@@ -83,7 +83,7 @@ export function Header({ pathname }) {
     return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', scroll); document.removeEventListener('keydown', key); };
   }, []);
   useEffect(() => {
-    setOpen(false); setActive('');
+    setOpen(false); setActive(pathname.startsWith('/services/') ? 'services' : '');
     if (!window.IntersectionObserver) return;
     const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); }), { rootMargin: '-15% 0px -65% 0px' });
     ['services', 'process', 'calculators', 'about', 'reviews', 'contact'].forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });

@@ -91,11 +91,14 @@ function Site({ initialPath }) {
     event.preventDefault(); window.history.pushState({}, '', url); setPathname(url.pathname);
   };
   return <div ref={scope} className={`site-shell${slug ? '' : ' has-hero-background'}`} onClick={navigate}>
-    {!slug && <div className="hero-backdrop" aria-hidden="true"><SourceImage className="hero-backdrop-image" src="/assets/UAE Currency and White Eagle Logo.png" alt="" width="1672" height="941" fetchPriority="high" /></div>}
+    {!slug && <div className="hero-backdrop" aria-hidden="true"><picture className="hero-backdrop-picture">
+      <source media="(max-width: 767px)" srcSet="/assets/mobile-version%20bg.png" width="941" height="1672" />
+      <SourceImage className="hero-backdrop-image" src="/assets/UAE Currency and White Eagle Logo.png" alt="" width="1672" height="941" fetchPriority="high" />
+    </picture></div>}
     <a className="skip" href="#main"><T k="skip" /></a><ProgressAndGlow /><Header pathname={pathname} />
     <div className="ambient-motes" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
     {slug ? <ServicePage key={slug} slug={slug} /> : <Home />}
-    <Footer /><a className="floating-wa" href={WHATSAPP} aria-label={tr('floatingLabel')}>◉</a>
+    <Footer /><a className="floating-wa" href={WHATSAPP} aria-label={tr('floatingLabel')}><img src="/assets/wt-logo.png" alt="" width="48" height="48" /></a>
   </div>;
 }
 const BRAND_TITLE = 'Al Shahin';

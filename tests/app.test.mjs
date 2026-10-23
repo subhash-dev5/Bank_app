@@ -53,7 +53,23 @@ test('every dictionary entry has a native-review row; all six views have unique 
   for (const [key, values] of Object.entries(copy)) { assert(values.en && values.ar, key); assert(missing.includes(`\`${key}\``), key); }
   const views = ['/', ...['real-estate-financing', 'salary-financing', 'project-financing', 'open-bank-account', 'personal-loan'].map(s => `/services/${s}.html`)];
   const rendered = new Map(views.map(url => [url, new JSDOM(renderToStaticMarkup(createElement(App, { initialPath: url }))).window.document]));
+  const mobileBackground = rendered.get('/').querySelector('.hero-backdrop picture source');
+  assert.equal(mobileBackground?.getAttribute('media'), '(max-width: 767px)');
+  assert.equal(decodeURIComponent(mobileBackground.getAttribute('srcset')), '/assets/mobile-version bg.png');
+  await fs.access(new URL(`../public${mobileBackground.getAttribute('srcset')}`, import.meta.url));
   for (const [url, doc] of rendered) {
+    if (url !== '/') {
+      const slugs = ['real-estate-financing', 'salary-financing', 'project-financing', 'open-bank-account', 'personal-loan'];
+      const index = slugs.findIndex(slug => url.includes(slug));
+      for (const key of [`service${index}`, `detailLine${index}`, `detailDesc${index}`, `who${index}`, 'whoHeading', 'detailDraft', 'prepare', 'prep0', 'prep1', 'prep2', 'prep3', 'noDocs', 'ready', 'approval']) {
+        const element = doc.querySelector(`[data-i18n="${key}"]`);
+        assert(element, `Preserved service content ${key} on ${url}`);
+        assert.equal(element.textContent, copy[key].en);
+      }
+      assert.equal(doc.querySelector('.service-subnav [aria-current="page"]').getAttribute('href'), url);
+      assert.equal(doc.querySelector('.detail-art img').getAttribute('src'), `/assets/${[1, 2, 3, 4, 6][index]}.png`);
+      assert(doc.querySelector('.detail-cta a[href="/#contact"]'));
+    }
     const ids = [...doc.querySelectorAll('[id]')].map(el => el.id);
     assert.equal(ids.length, new Set(ids).size, url); assert.equal(doc.querySelectorAll('h1').length, 1, url);
     for (const link of doc.querySelectorAll('a[href]')) {

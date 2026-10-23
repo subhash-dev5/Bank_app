@@ -46,7 +46,7 @@ export function usePageMotion(scope, pathname, lang) {
       root.dataset.animationEngine = 'ready';
       context = gsap.context(() => {
         media = gsap.matchMedia();
-        media.add('(min-width: 768px)', () => {
+        media.add('(min-width: 1101px) and (pointer: fine)', () => {
           const rail = root.querySelector('.services-track'), section = root.querySelector('.services-section');
           if (!rail) return;
           document.body.classList.add('motion-rail');

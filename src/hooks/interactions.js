@@ -9,9 +9,10 @@ export function useScrollDetails(scope, pathname) {
     const reduced = motionQuery();
     const sections = [...root.querySelectorAll('main > section')];
     const steps = [...root.querySelectorAll('.process-step')];
-    const entrances = [...root.querySelectorAll('.section-heading, .service-card, .process-step, .calculator-card, .eligibility-card, .team-card, .review-carousel, .faq-list details, .contact-form, .about-art, .detail-content > div')];
+    const entrances = [...root.querySelectorAll('.section-heading, .service-card, .process-step, .calculator-card, .eligibility-card, .team-card, .review-carousel, .faq-list details, .contact-form, .about-art, .about-us-visual, .detail-panel')];
     const visible = new Set();
     const ripples = new Map();
+    const clickAnimations = new Map();
     let frame = 0, observer, entranceObserver;
 
     function paint() {
@@ -33,6 +34,7 @@ export function useScrollDetails(scope, pathname) {
     function queue() { if (!frame) frame = requestAnimationFrame(paint); }
     function clearRipples() {
       ripples.forEach((timer, node) => { clearTimeout(timer); node.remove(); }); ripples.clear();
+      clickAnimations.forEach(animation => animation.cancel()); clickAnimations.clear();
     }
     function setup() {
       observer?.disconnect(); entranceObserver?.disconnect(); visible.clear();
@@ -71,6 +73,22 @@ export function useScrollDetails(scope, pathname) {
     }
     function ripple(event) {
       if (reduced.matches) return;
+      const surface = event.target.closest('.about-image, .service-card, .service-poster, .contact-map-card, .faq-list summary');
+      if (surface?.animate) {
+        clickAnimations.get(surface)?.cancel();
+        const summary = surface.tagName === 'SUMMARY';
+        const animation = surface.animate(summary ? [
+          { backgroundColor: 'transparent' },
+          { backgroundColor: '#c9a24b18', offset: .25 },
+          { backgroundColor: 'transparent' },
+        ] : [
+          { outline: '1px solid transparent', outlineOffset: '-2px' },
+          { outline: '1px solid #c9a24baa', outlineOffset: '-2px', offset: .25 },
+          { outline: '1px solid transparent', outlineOffset: '-2px' },
+        ], { duration: 480, easing: 'ease-out' });
+        clickAnimations.set(surface, animation);
+        animation.onfinish = () => { if (clickAnimations.get(surface) === animation) clickAnimations.delete(surface); };
+      }
       const button = event.target.closest('.button, .carousel-controls button');
       if (!button || !root.contains(button) || button.disabled) return;
       if (ripples.size >= 4) { const first = ripples.entries().next().value; clearTimeout(first[1]); first[0].remove(); ripples.delete(first[0]); }

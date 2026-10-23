@@ -926,5 +926,41 @@
   "openGoogleMaps": {
     "en": "Open in Google Maps ↗",
     "ar": "افتح في خرائط جوجل ↖"
+  },
+  "aboutUsTitle": {
+    "en": "About us",
+    "ar": "من نحن"
+  },
+  "aboutCompanyName": {
+    "en": "Al Shahin Banking Services and Consultations",
+    "ar": "الشاهين للخدمات والاستشارات المصرفية"
+  },
+  "aboutUsIntro": {
+    "en": "Based in Ras Al Khaimah, UAE, we provide banking guidance and financial consultations for individuals and businesses. Through tailored support and practical advice, we help clients understand their options and prepare for informed financial decisions.",
+    "ar": "نقدم من رأس الخيمة في دولة الإمارات العربية المتحدة إرشاداً مصرفياً واستشارات مالية للأفراد والشركات. ومن خلال الدعم المخصص والمشورة العملية، نساعد العملاء على فهم خياراتهم والاستعداد لاتخاذ قرارات مالية مدروسة."
+  },
+  "aboutPersonalGroup": {
+    "en": "Banking services",
+    "ar": "الخدمات المصرفية"
+  },
+  "aboutBusinessGroup": {
+    "en": "Banking solutions",
+    "ar": "الحلول المصرفية"
+  },
+  "aboutAdvisoryGroup": {
+    "en": "Financial consulting and advisory",
+    "ar": "الاستشارات المالية"
+  },
+  "aboutIslamicGroup": {
+    "en": "Sharia-compliant financial solutions",
+    "ar": "حلول مالية متوافقة مع الشريعة"
+  },
+  "aboutDigitalGroup": {
+    "en": "Digital banking services",
+    "ar": "الخدمات المصرفية الرقمية"
+  },
+  "aboutPaymentImageAlt": {
+    "en": "Client-supplied Al Shahin artwork with UAE silver coins and Visa and Mastercard logos",
+    "ar": "تصميم مقدم من العميل للشاهين يتضمن عملات إماراتية فضية وشعاري فيزا وماستركارد"
   }
 }

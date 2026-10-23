@@ -14,6 +14,15 @@
 @keyframes mote-rise{0%,100%{opacity:0;transform:translateY(20px)}30%,65%{opacity:.5}85%{transform:translateY(-90px);opacity:0}}
 @keyframes contact-pulse{0%,50%,100%{opacity:0;transform:scale(1)}65%{opacity:.35}90%{opacity:0;transform:scale(1.3)}}
 [dir=rtl] .ambient-motes{transform:scaleX(-1)}
+/* A small amount of depth on the supplied imagery, without moving text. */
+.reviews-section.scroll-scene .reviews-background{top:-24px;bottom:auto;height:calc(100% + 48px);transform:translate3d(0,var(--scene-travel,0px),0)}
+.about-section .about-art.about-image:before{display:block;inset:-50%;border:0;border-radius:0;background:linear-gradient(115deg,transparent 38%,#ffffff1f 48%,#ffffff33 50%,transparent 62%);transform:translateX(-75%);pointer-events:none;z-index:1}
+.scene-in-view .about-art.about-image:before{animation:art-glint 1.6s ease-out .25s both}
+.faq-list details[open] .faq-number{color:var(--teal);transition:color .25s}
+.faq-list details[open] .faq-plus{text-shadow:0 0 12px #c9a24b44}
+.contact-map-actions .text-link{transition:color .2s,border-color .2s}
+.contact-map-actions .text-link:hover{border-bottom-color:var(--teal);color:var(--teal)}
+@keyframes art-glint{from{transform:translateX(-75%);opacity:0}15%{opacity:1}to{transform:translateX(75%);opacity:0}}
 /* Scroll-linked accents: transform only decorative layers, never the page flow. */
 .scroll-scene .section-heading{position:relative}
 .scroll-scene .section-heading:after{content:'';position:absolute;inset-inline-start:0;bottom:-9px;width:80px;height:1px;background:linear-gradient(90deg,var(--gold),#c9a24b20);transform:scaleX(var(--scene-progress,0));transform-origin:left;will-change:transform}
