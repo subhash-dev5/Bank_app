@@ -40,7 +40,7 @@
 .service-card .source-image{max-width:none;border-radius:inherit}
 .service-card-body{background:linear-gradient(130deg,#ffffff30,transparent 70%)}
 .service-card:hover{box-shadow:0 22px 48px #0b1f3a17,0 4px 12px #c9a24b10,inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff77}
-.service-number{background:#fffdf4b8;border:1px solid #ffffffd9;border-radius:10px;box-shadow:0 3px 12px #0b1f3a12;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.service-number{left:auto;right:14px;display:flex;align-items:center;justify-content:center;font-size:19.44px;line-height:1;font-variant-numeric:lining-nums tabular-nums;padding:0 0 2px;background:#fffdf4b8;border:1px solid #ffffffd9;border-radius:10px;box-shadow:0 3px 12px #0b1f3a12;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 .team-card,.placeholder-tile,.map-placeholder{border-style:dashed;border-color:#a9a18bb3}
 .scene-in-view .placeholder-tile{background:var(--glass-fill);border-color:#a9a18bb3}
 .portrait-placeholder{border-radius:12px;background:linear-gradient(140deg,#ffffff80,#d8ddce55);box-shadow:inset 0 1px 0 #ffffffb3}
