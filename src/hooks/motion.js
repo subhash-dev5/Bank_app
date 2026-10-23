@@ -47,18 +47,11 @@ export function usePageMotion(scope, pathname, lang) {
       context = gsap.context(() => {
         media = gsap.matchMedia();
         media.add('(min-width: 768px)', () => {
-          if (root.querySelector('.hero')) {
-            gsap.to('.hero .sun-disc', { y: -50, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-            gsap.to('.hero .art-caption', { y: -28, opacity: .3, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-            gsap.to('.mountain-layer', { y: 45, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 } });
-            gsap.to('.skyline-layer', { y: 90, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .8 } });
-            gsap.to('.coin', { y: -65, rotation: 12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-          }
           const rail = root.querySelector('.services-track'), section = root.querySelector('.services-section');
           if (!rail) return;
           document.body.classList.add('motion-rail');
           const distance = () => Math.max(0, rail.scrollWidth - root.querySelector('.services-window').clientWidth);
-          const animation = gsap.to(rail, { x: () => (lang === 'ar' ? 1 : -1) * distance(), ease: 'none', scrollTrigger: { trigger: section, start: 'top 85px', end: () => `+=${Math.min(distance(), innerHeight * 1.3)}`, pin: true, scrub: .5, invalidateOnRefresh: true } });
+          const animation = gsap.to(rail, { x: () => (lang === 'ar' ? 1 : -1) * distance(), ease: 'none', scrollTrigger: { trigger: section, start: () => section.offsetHeight > innerHeight - 100 ? 'bottom bottom' : 'top 85px', end: () => `+=${Math.min(distance(), innerHeight * 1.3)}`, pin: true, scrub: .5, invalidateOnRefresh: true } });
           const focus = event => {
             const card = event.target.closest('.service-card'); if (!card) return;
             const cards = [...rail.children], fraction = cards.indexOf(card) / Math.max(1, cards.length - 1), trigger = animation.scrollTrigger;

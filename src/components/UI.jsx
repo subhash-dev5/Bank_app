@@ -68,10 +68,19 @@ export function Header({ pathname }) {
   const [open, setOpen] = useState(false), [compact, setCompact] = useState(false), [active, setActive] = useState('');
   const menuButton = useRef(null);
   useEffect(() => {
-    const scroll = () => setCompact(window.scrollY > 40);
+    let frame = 0;
+    const scroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        // Separate thresholds prevent the shrinking header from toggling itself
+        // when its own height change slightly shifts the scroll position.
+        setCompact(previous => previous ? window.scrollY > 24 : window.scrollY > 96);
+      });
+    };
     const key = e => { if (e.key === 'Escape') { setOpen(false); menuButton.current?.focus(); } };
     scroll(); window.addEventListener('scroll', scroll, { passive: true }); document.addEventListener('keydown', key);
-    return () => { window.removeEventListener('scroll', scroll); document.removeEventListener('keydown', key); };
+    return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', scroll); document.removeEventListener('keydown', key); };
   }, []);
   useEffect(() => {
     setOpen(false); setActive('');

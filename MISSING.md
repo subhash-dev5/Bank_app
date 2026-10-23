@@ -1,5 +1,33 @@
 # Content and production handover
 
+## Contact map integration
+
+| Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| Google Maps business marker | Contact map card | A public query embed uses the supplied business name and Julphar Tower, RAK address. The live site and short Maps URL could not be fetched by the browsing tool; verify the exact marker in a browser before production. No rating or review count is hardcoded. | Client |
+| Third-party map / privacy disclosure | Contact map iframe | Google supplies the map directly; review the production privacy policy and any applicable consent requirements for third-party embeds. No Maps SDK, API key or billing configuration is added. | Dechub |
+
+## Client-supplied service posters
+
+The six supplied PNG posters replace the externally hosted service-card images and the detail-page skyline illustrations. Embedded Arabic stays as supplied in both language modes and needs native review. Image claims are client-provided artwork, not verified product terms.
+
+| Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| 1.png — real estate financing | Home card / real estate detail page | All embedded Arabic needs native review; approve marketing wording, ownership claims, contact details and rights. | Client |
+| 2.png — salary financing | Home card / salary detail page | All embedded Arabic needs native review. Confirm the first-salary financing and citizens-only wording before production. | Client |
+| 3.png — project financing | Home card / project detail page | All embedded Arabic needs native review; approve service availability, ownership claims and marketing wording. | Client |
+| 4.png — open a bank account | Home card / bank-account detail page | All embedded Arabic needs native review; confirm supported account types and advisory/intermediary scope. | Client |
+| 5.png — NafIs | Home card / personal-loan NafIs section | All embedded Arabic needs native review. Verify product identity, NafIs eligibility and depicted financing/card availability; no bank affiliations inferred. | Client |
+| 6.png — personal loan | Home card / personal-loan detail page | All embedded Arabic needs native review. Verify artwork-specific 9/12-month repayment-deferral claims and eligibility; these are not general website guarantees. | Client |
+| Poster production assets | All service images | Optimise the supplied approximately 2 MB PNGs for production and prepare English artwork if needed. Existing malformed phone and brand-name verification flags also apply to embedded text. | Dechub |
+
+## Client-supplied hero background
+
+| Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| UAE Currency and White Eagle Logo.png | Continuous header and hero background | Client-supplied image replaces the home-page skyline composition. Confirm final crop, rights and brand approval. Optimise the 2.6 MB PNG for production. | Client |
+| Hero-to-page transition | Shared backdrop and sticky header | Background fades continuously to ivory as the hero leaves view; the header becomes opaque. Reduced motion removes parallax. Approve final motion timing and mobile crop. | Client |
+
 All placeholders and draft content below require approval before production. No licences, partnerships, years in business, testimonials, ratings or statistics have been invented.
 
 | Item | Where it appears | Why it’s needed | Owner (Client or Dechub) |
@@ -309,3 +337,13 @@ The requested JavaScript stack supersedes the original build-free HTML requireme
 | تقليل الحركة | `reduceMotion` / motion control | needs native review | Client |
 | حركة كاملة | `motionFull` / motion control | needs native review | Client |
 | حركة مخففة | `motionReduced` / motion control | needs native review | Client |
+
+## Contact map Arabic copy
+
+| Item | Where it appears | Why it is needed | Owner (Client or Dechub) |
+|---|---|---|---|
+| خريطة جوجل لمكتب الشاهين في رأس الخيمة | `officeMapTitle` / contact map | needs native review | Client |
+| تفضل بزيارة مكتبنا | `visitOffice` / contact map | needs native review | Client |
+| افتح في خرائط جوجل ↖ | `openGoogleMaps` / contact map | needs native review | Client |
+
+Motion control update: the client requested removal of the Full/Reduced motion switch. Full animations now start automatically, and the previous control is no longer rendered.

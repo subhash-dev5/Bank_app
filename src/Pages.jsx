@@ -1,6 +1,7 @@
 import React from 'react';
 import { T, SourceImage, TiltCard, useLanguage } from './components/UI.jsx';
 import { Calculator, Eligibility, Reviews, ContactForm } from './components/Widgets.jsx';
+import ContactMap from './components/ContactMap.jsx';
 function Hero() {
   return <section className="hero" aria-labelledby="hero-title">
 <div className="hero-grain" aria-hidden="true">
@@ -28,25 +29,7 @@ function Hero() {
 <T as="span" k="proof3" />
 </div>
 </div>
-<div className="hero-art" aria-hidden="true">
-<div className="orbit orbit-one">
-</div>
-<div className="orbit orbit-two">
-</div>
-<span className="art-label">{"25.8007° N 55.9762° E"}</span>
-<div className="sun-disc">
-</div>
-<SourceImage className="mountain-layer" src="/assets/mountains.svg" alt="" width="800" height="600" />
-<SourceImage className="skyline-layer" src="/assets/skyline.svg" alt="" width="800" height="600" />
-<div className="coin coin-one">{"د.إ"}</div>
-<div className="coin coin-two">{"✦"}</div>
-<div className="art-caption">
-<span>{"رأس الخيمة"}</span>
-<small>{"RAS AL KHAIMAH, UAE"}</small>
-</div>
-<div className="art-seal">{"AS"}<span>{"YOUR AMBITION"}<br />{"OUR GUIDANCE"}</span>
-</div>
-</div>
+<div className="hero-photo-space" aria-hidden="true" />
 <div className="hero-bottom">
 <T as="span" k="heroAdvisory" />
 <T as="a" k="explore" className="scroll-link" href="#services" />
@@ -81,7 +64,7 @@ function Services() {
 <div className="services-track">
 <TiltCard className="service-card">
 <div className="service-art service-art-1">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/1-4-1024x1024.jpg" alt="Real estate financing" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/1.png" alt="Real estate financing" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"01"}</span>
 </div>
 <div className="service-card-body">
@@ -93,7 +76,7 @@ function Services() {
 </TiltCard>
 <TiltCard className="service-card">
 <div className="service-art service-art-2">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/2-1024x1024.jpg" alt="Salary financing" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/2.png" alt="Salary financing" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"02"}</span>
 </div>
 <div className="service-card-body">
@@ -105,7 +88,7 @@ function Services() {
 </TiltCard>
 <TiltCard className="service-card">
 <div className="service-art service-art-3">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/3-1024x1024.jpg" alt="Project financing" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/3.png" alt="Project financing" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"03"}</span>
 </div>
 <div className="service-card-body">
@@ -117,7 +100,7 @@ function Services() {
 </TiltCard>
 <TiltCard className="service-card">
 <div className="service-art service-art-4">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/4-1024x1024.jpg" alt="Open a bank account" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/4.png" alt="Open a bank account" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"04"}</span>
 </div>
 <div className="service-card-body">
@@ -129,7 +112,7 @@ function Services() {
 </TiltCard>
 <TiltCard className="service-card">
 <div className="service-art service-art-5">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/5-1024x1024.jpg" alt="Personal loan" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/6.png" alt="Personal loan" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"05"}</span>
 </div>
 <div className="service-card-body">
@@ -141,7 +124,7 @@ function Services() {
 </TiltCard>
 <TiltCard className="service-card">
 <div className="service-art service-art-6">
-<SourceImage className="source-image" src="https://shahinbs.com/wp-content/uploads/2024/11/6-1024x1024.jpg" alt="NafIs" loading="lazy" width="360" height="230" />
+<SourceImage className="source-image" src="/assets/5.png" alt="NafIs" loading="lazy" width="1024" height="1536" />
 <span className="service-number">{"06"}</span>
 </div>
 <div className="service-card-body">
@@ -376,7 +359,7 @@ function FAQ() {
 }
 function Contact() {
   return <section className="contact-section section" id="contact">
-<div>
+<div className="contact-information">
 <div className="section-heading reveal">
 <T as="p" k="contacteyebrow" className="eyebrow" />
 <T as="h2" k="contacttitle" />
@@ -392,12 +375,7 @@ function Contact() {
 <T as="span" k="hours" />
 </p>
 </div>
-<div className="map-placeholder">
-<span aria-hidden="true">{"⌖"}</span>
-<T as="p" k="mapLabel" className="eyebrow" />
-<T as="address" k="address" />
-</div>
-<T as="a" k="contactWhatsApp" className="text-link" href="https://wa.me/971557010000" />
+<ContactMap />
 </div>
 <ContactForm />
 </section>;
@@ -474,9 +452,8 @@ function Service0() {
 <T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
 </div>
 </div>
-<div className="detail-art" aria-hidden="true">
-<SourceImage src="/assets/skyline.svg" alt="" width="800" height="600" />
-<span>{"04"}</span>
+<div className="detail-art service-poster">
+<SourceImage src="/assets/4.png" alt="Open a bank account" altKey="service3" width="1024" height="1536" />
 </div>
 </section>
 <section className="detail-content section">
@@ -517,9 +494,8 @@ function Service1() {
 <T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
 </div>
 </div>
-<div className="detail-art" aria-hidden="true">
-<SourceImage src="/assets/skyline.svg" alt="" width="800" height="600" />
-<span>{"05"}</span>
+<div className="detail-art service-poster">
+<SourceImage src="/assets/6.png" alt="Personal loan" altKey="service4" width="1024" height="1536" />
 </div>
 </section>
 <section className="detail-content section">
@@ -543,6 +519,7 @@ function Service1() {
 <T as="h2" k="service5" />
 <T as="p" k="benefit5" />
 <T as="p" k="nafisNote" className="notice" />
+<div className="service-poster"><SourceImage src="/assets/5.png" alt="NafIs" altKey="service5" width="1024" height="1536" loading="lazy" /></div>
 </section>
 <section className="detail-cta section">
 <T as="h2" k="ready" />
@@ -565,9 +542,8 @@ function Service2() {
 <T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
 </div>
 </div>
-<div className="detail-art" aria-hidden="true">
-<SourceImage src="/assets/skyline.svg" alt="" width="800" height="600" />
-<span>{"03"}</span>
+<div className="detail-art service-poster">
+<SourceImage src="/assets/3.png" alt="Project financing" altKey="service2" width="1024" height="1536" />
 </div>
 </section>
 <section className="detail-content section">
@@ -608,9 +584,8 @@ function Service3() {
 <T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
 </div>
 </div>
-<div className="detail-art" aria-hidden="true">
-<SourceImage src="/assets/skyline.svg" alt="" width="800" height="600" />
-<span>{"01"}</span>
+<div className="detail-art service-poster">
+<SourceImage src="/assets/1.png" alt="Real estate financing" altKey="service0" width="1024" height="1536" />
 </div>
 </section>
 <section className="detail-content section">
@@ -651,9 +626,8 @@ function Service4() {
 <T as="a" k="checkEligibility" className="text-link" href="/#eligibility" />
 </div>
 </div>
-<div className="detail-art" aria-hidden="true">
-<SourceImage src="/assets/skyline.svg" alt="" width="800" height="600" />
-<span>{"02"}</span>
+<div className="detail-art service-poster">
+<SourceImage src="/assets/2.png" alt="Salary financing" altKey="service1" width="1024" height="1536" />
 </div>
 </section>
 <section className="detail-content section">

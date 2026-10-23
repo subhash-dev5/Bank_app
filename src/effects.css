@@ -44,10 +44,18 @@
 .back-to-top:hover{background:#eee4cd;transform:translateY(-3px)}
 .back-to-top svg{position:absolute;inset:0;width:44px;height:44px;transform:rotate(-90deg);fill:none;stroke-width:1.5}
 .top-track{stroke:var(--line)}.top-progress{stroke:var(--gold-dark);stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round}
-.back-to-top>span{font-size:20px;line-height:1}
+.back-to-top>span{font-size:max(12px,24px);line-height:1}
 [dir=rtl] .back-to-top{right:auto;left:24px}
 @media(max-width:767px){.ambient-motes{top:470px;height:350px}.service-card:hover{transform:translateY(-4px)}.hero-art .orbit{animation-duration:100s}}
 /* Noticeable entrance and continuous motion, independent of the scroll engine. */
+/* Uploaded service posters retain their complete portrait artwork and lettering. */
+.services-section .service-art{height:auto;aspect-ratio:2/3;padding:0;background:transparent}
+.services-section .source-image{display:block;width:100%;height:100%;object-fit:cover}
+.service-card:hover .source-image{transform:none}
+.service-poster{width:100%;max-width:410px;aspect-ratio:2/3;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);box-shadow:0 18px 45px #0b1f3a12}
+.service-poster img{display:block;width:100%;height:100%;object-fit:contain}
+.nafis-block .service-poster{max-width:360px;margin-top:25px}
+@media(max-width:767px){.services-section .service-art{height:auto;aspect-ratio:2/3}.detail-art.service-poster{max-width:380px}}
 .hero-copy>*{animation:hero-entrance .95s cubic-bezier(.16,1,.3,1) both}
 .hero-copy>:nth-child(2){animation-delay:.12s}.hero-copy>:nth-child(3){animation-delay:.26s}.hero-copy>:nth-child(4){animation-delay:.4s}.hero-copy>:nth-child(5){animation-delay:.54s}
 .hero-art{animation:art-entrance 1.3s cubic-bezier(.16,1,.3,1) both}
@@ -66,19 +74,13 @@
 .about-art.enter-ready{translate:-55px 35px}.about-art.enter-ready.is-visible{translate:0 0}
 .contact-form.enter-ready{translate:45px 35px}.contact-form.enter-ready.is-visible{translate:0 0}
 .ambient-motes i{width:5px;height:5px;animation-duration:6s;box-shadow:0 0 12px #c9a24b80}
-.motion-toggle{position:fixed;bottom:24px;left:24px;display:flex;align-items:center;gap:10px;z-index:45;background:var(--navy);color:var(--ivory);border:1px solid #c9a24b88;border-radius:30px;padding:11px 14px;font-size:10px;box-shadow:0 5px 25px #0b1f3a20;cursor:pointer}
-.motion-bars{display:flex;gap:3px;align-items:center;height:14px}.motion-bars i{width:2px;height:5px;background:var(--gold);animation:motion-bars .8s ease-in-out infinite alternate}.motion-bars i:nth-child(2){animation-delay:-.3s}.motion-bars i:nth-child(3){animation-delay:-.6s}
-.motion-switch{width:22px;height:12px;position:relative;border:1px solid #c9a24b88;border-radius:12px;background:#c9a24b33}.motion-switch:after{content:'';position:absolute;top:2px;left:11px;width:6px;height:6px;border-radius:50%;background:var(--gold);transition:left .2s}
-.motion-toggle[aria-pressed=false] .motion-switch:after{left:3px}.motion-toggle[aria-pressed=false] .motion-bars i{animation:none}
-[dir=rtl] .motion-toggle{left:auto;right:24px}
 @keyframes hero-entrance{from{opacity:0;transform:translateY(45px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
 @keyframes art-entrance{from{opacity:0;translate:65px 0;scale:.88}to{opacity:1;translate:0 0;scale:1}}
 @keyframes skyline-float{50%{translate:0 -16px}}
 @keyframes mountain-drift{50%{translate:-10px 6px}}
 @keyframes coin-drift{50%{translate:0 -28px;rotate:14deg;scale:1.08}}
 @keyframes scroll-nudge{50%{translate:0 8px;opacity:.4}}
-@keyframes motion-bars{to{height:14px}}
-@media(max-width:767px){.enter-ready{translate:0 40px;scale:.98}.motion-toggle{left:16px;bottom:20px;font-size:9px;padding:10px}.hero-art .orbit{animation-duration:22s}}
+@media(max-width:767px){.enter-ready{translate:0 40px;scale:.98}.hero-art .orbit{animation-duration:22s}}
 @media(pointer:fine){html[data-motion="full"] .cursor-glow{display:block}}
 html[data-motion="reduced"] *,html[data-motion="reduced"] *:before,html[data-motion="reduced"] *:after{animation:none!important;transition:none!important}
 html[data-motion="reduced"] .enter-ready{opacity:1;translate:none;scale:1}

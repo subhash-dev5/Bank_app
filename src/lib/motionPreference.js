@@ -1,5 +1,5 @@
 // One preference shared by CSS, scroll effects, counters and pointer interactions.
-// The device setting remains the default; the review control is an explicit override.
+// The app enables full motion automatically; no visible preference control is used.
 export function motionQuery() {
   const system = matchMedia('(prefers-reduced-motion: reduce)');
   return {

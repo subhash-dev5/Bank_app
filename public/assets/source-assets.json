@@ -2,6 +2,14 @@
   "logo": "https://shahinbs.com/wp-content/uploads/2024/11/cropped-Untitled-3-copy-2.jpg",
   "dirham": "https://shahinbs.com/wp-content/uploads/2024/11/%D8%A7%D9%84%D8%AF%D8%B1%D9%87%D9%85.jpg",
   "services": [
+    "/assets/1.png",
+    "/assets/2.png",
+    "/assets/3.png",
+    "/assets/4.png",
+    "/assets/6.png",
+    "/assets/5.png"
+  ],
+  "originalServiceUrls": [
     "https://shahinbs.com/wp-content/uploads/2024/11/1-4-1024x1024.jpg",
     "https://shahinbs.com/wp-content/uploads/2024/11/2-1024x1024.jpg",
     "https://shahinbs.com/wp-content/uploads/2024/11/3-1024x1024.jpg",

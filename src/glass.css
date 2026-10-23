@@ -1,0 +1,80 @@
+/* Shared liquid-glass surfaces. Poster artwork stays opaque and edge-to-edge. */
+:root{
+  --glass-fill:linear-gradient(135deg,#ffffffb8 0%,#fffdf778 48%,#ffffff94 100%);
+  --glass-border:#ffffffcc;
+  --glass-shadow:0 14px 40px #0b1f3a0c,0 3px 10px #0b1f3a05,inset 0 1px 0 #ffffff,inset 0 -1px 0 #ffffff55;
+  --glass-blur:blur(18px) saturate(160%);
+}
+.service-card,.calculator-card,.eligibility-card,.team-card,.contact-form,.placeholder-tile,.map-placeholder,.flow-option,.service-poster,.faq-list details{
+  background:var(--glass-fill);
+  border-color:var(--glass-border);
+  box-shadow:var(--glass-shadow);
+  -webkit-backdrop-filter:var(--glass-blur);
+  backdrop-filter:var(--glass-blur);
+  border-radius:20px;
+}
+.service-card{padding:0;overflow:hidden}
+.contact-map-card{margin-block:22px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:20px;box-shadow:var(--glass-shadow);overflow:hidden;-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur)}
+.contact-map-frame{display:block;width:100%;height:290px;border:0;background:#e7ebe5}
+.contact-map-info{padding:18px 22px 20px}
+.contact-map-info .eyebrow{font-size:max(12px,10.8px);margin-bottom:8px}
+.contact-map-info address{font-style:normal;font-size:max(12px,14.4px);line-height:1.8;max-width:330px}
+.contact-map-info .text-link{margin-top:8px}
+.contact-section{align-items:end;column-gap:clamp(32px,5vw,80px)}
+.contact-information{min-width:0}
+.contact-information .contact-map-card{margin-bottom:0}
+.contact-section>.contact-form{align-self:end;height:auto}
+.contact-map-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:10px}
+.contact-map-actions .text-link{margin-top:0}
+.eligibility-card #flow-body>.button+button.text-link{margin-top:16px}
+@media(max-width:767px){.contact-map-frame{height:260px}.contact-map-info{padding:16px 18px}}
+.service-card .service-art{width:100%;margin:0;padding:0;border-radius:19px 19px 0 0}
+.service-card .source-image{max-width:none;border-radius:inherit}
+.service-card-body{background:linear-gradient(130deg,#ffffff30,transparent 70%)}
+.service-card:hover{box-shadow:0 22px 48px #0b1f3a17,0 4px 12px #c9a24b10,inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff77}
+.service-number{background:#fffdf4b8;border:1px solid #ffffffd9;border-radius:10px;box-shadow:0 3px 12px #0b1f3a12;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.team-card,.placeholder-tile,.map-placeholder{border-style:dashed;border-color:#a9a18bb3}
+.scene-in-view .placeholder-tile{background:var(--glass-fill);border-color:#a9a18bb3}
+.portrait-placeholder{border-radius:12px;background:linear-gradient(140deg,#ffffff80,#d8ddce55);box-shadow:inset 0 1px 0 #ffffffb3}
+.flow-option{border-radius:13px;border-color:#d9d8ccc7;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.flow-option:hover,.flow-option:has(input:checked){background:linear-gradient(135deg,#ffffffd9,#dfece394);border-color:#73988bb3;box-shadow:0 5px 16px #32675e10,inset 0 1px 0 #ffffff}
+.faq-list{display:grid;gap:10px}
+.faq-list details,.faq-list details:last-child{border:1px solid var(--glass-border);border-radius:15px;padding-inline:20px}
+.faq-list details[open]{background:linear-gradient(130deg,#ffffffd9,#efe6d68c)}
+.faq-list summary:hover{background:transparent}
+.review-placeholder{background:linear-gradient(135deg,#ffffff1c,#ffffff08);border-color:#e8d39d77;border-radius:18px;box-shadow:0 12px 35px #00000012,inset 0 1px 0 #ffffff33;-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%)}
+/* A dark translucent tint keeps primary actions readable on light imagery. */
+.button{
+  background:linear-gradient(135deg,#405469ed 0%,#0b1f3aeb 48%,#1e374ce8 100%);
+  color:#fff;
+  border:1px solid #ffffff66;
+  border-radius:999px;
+  box-shadow:0 6px 20px #0b1f3a1c,inset 0 1px 0 #ffffff66,inset 0 -1px 0 #ffffff1a;
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  backdrop-filter:blur(14px) saturate(160%);
+  transition:background .25s,border-color .25s,box-shadow .25s,transform .25s;
+}
+.button:before{content:'';position:absolute;inset:1px 12% auto;height:1px;border-radius:100%;background:linear-gradient(90deg,transparent,#ffffff88,transparent);pointer-events:none}
+.button:hover{background:linear-gradient(135deg,#567e77ee,#214d46ef 58%,#32675eeb);border-color:#ffffffaa;box-shadow:0 10px 28px #0b1f3a26,inset 0 1px 0 #ffffff88,inset 0 -1px 0 #ffffff22}
+.button:active{box-shadow:0 2px 8px #0b1f3a1c,inset 0 2px 6px #00000018}
+.language,.call-link,.menu-toggle,.carousel-controls button,.back-to-top,button.text-link{
+  background:linear-gradient(135deg,#ffffffbf,#ffffff59);
+  border:1px solid #ffffffbf;
+  border-radius:999px;
+  box-shadow:0 3px 12px #0b1f3a09,inset 0 1px 0 #ffffff;
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  backdrop-filter:blur(12px) saturate(150%);
+}
+.language{padding:7px 10px}.menu-toggle{padding:4px 10px}button.text-link{padding:8px 15px}
+.reviews-section .carousel-controls button{background:linear-gradient(135deg,#ffffff25,#ffffff0a);border-color:#ffffff55;box-shadow:0 3px 12px #00000012,inset 0 1px 0 #ffffff44}
+.calculator-card [role=tab]{border-radius:12px 12px 0 0}
+.calculator-card [role=tab][aria-selected=true]{background:linear-gradient(135deg,#ffffffb3,#c9a24b1f);box-shadow:inset 0 1px 0 #ffffff}
+.floating-wa{background:linear-gradient(135deg,#6d9b90e8,#32675ef0 55%,#244e46ee);box-shadow:0 6px 20px #0b1f3a22,inset 0 1px 0 #ffffff88,inset 0 -1px 0 #ffffff22;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.field input,.field select,.field textarea{background:linear-gradient(135deg,#ffffff80,#ffffff33);border-color:#d5d4c8;border-radius:11px;box-shadow:inset 0 1px 0 #ffffffaa}
+.field:focus-within input,.field:focus-within select,.field:focus-within textarea{background:#ffffff99}
+.field [aria-invalid=true]{border-color:#a03425}
+/* Gentle colour behind glass gives it depth without moving page content. */
+.services-section,.calculator-section,.team-section,.partners,.faq-section{background-image:radial-gradient(ellipse at 15% 20%,#c9a24b0c,transparent 55%),radial-gradient(ellipse at 85% 85%,#32675e09,transparent 50%)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.service-card,.calculator-card,.eligibility-card,.team-card,.contact-form,.placeholder-tile,.map-placeholder,.flow-option,.service-poster,.faq-list details{background:#fffdf4f2}.review-placeholder{background:#23374a}}
+@media(max-width:767px){:root{--glass-blur:blur(10px) saturate(145%)}.service-card,.calculator-card,.eligibility-card,.team-card,.contact-form{border-radius:16px}.service-card .service-art{border-radius:15px 15px 0 0}.faq-list details{padding-inline:14px}}
+@media(prefers-reduced-motion:reduce){html:not([data-motion="full"]) .button,html:not([data-motion="full"]) .flow-option{transition:none}}

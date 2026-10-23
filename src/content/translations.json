@@ -914,5 +914,17 @@
   "motionReduced": {
     "en": "Reduced motion",
     "ar": "حركة مخففة"
+  },
+  "officeMapTitle": {
+    "en": "Google Map showing the Al Shahin office in Ras Al Khaimah",
+    "ar": "خريطة جوجل لمكتب الشاهين في رأس الخيمة"
+  },
+  "visitOffice": {
+    "en": "VISIT OUR OFFICE",
+    "ar": "تفضل بزيارة مكتبنا"
+  },
+  "openGoogleMaps": {
+    "en": "Open in Google Maps ↗",
+    "ar": "افتح في خرائط جوجل ↖"
   }
 }

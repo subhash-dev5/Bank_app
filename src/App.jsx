@@ -1,10 +1,10 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { LanguageProvider, Header, T, useLanguage, serviceSlugs, WHATSAPP } from './components/UI.jsx';
+import { LanguageProvider, Header, T, SourceImage, useLanguage, serviceSlugs, WHATSAPP } from './components/UI.jsx';
 import { Footer, Home, ServicePage } from './Pages.jsx';
 import { usePageMotion } from './hooks/motion.js';
 import { useScrollDetails } from './hooks/interactions.js';
 import { motionQuery } from './lib/motionPreference.js';
-import MotionControl from './components/MotionControl.jsx';
+import { useHeroBackground } from './hooks/heroBackground.js';
 
 function ProgressAndGlow() {
   const progress = useRef(null), glow = useRef(null);
@@ -57,8 +57,14 @@ function Site({ initialPath }) {
   const scope = useRef(null);
   const { lang, tr } = useLanguage();
   const slug = pathname.match(/^\/services\/([^/]+)\.html$/)?.[1];
+  useLayoutEffect(() => {
+    document.documentElement.dataset.motion = 'full';
+    window.dispatchEvent(new Event('shahin:motion-change'));
+    return () => { delete document.documentElement.dataset.motion; };
+  }, []);
   usePageMotion(scope, pathname, lang);
   useScrollDetails(scope, pathname);
+  useHeroBackground(scope, pathname);
   useEffect(() => {
     const pop = () => setPathname(window.location.pathname);
     window.addEventListener('popstate', pop); return () => window.removeEventListener('popstate', pop);
@@ -84,8 +90,9 @@ function Site({ initialPath }) {
     if (!['/', '/index.html', ...serviceSlugs.map(s => `/services/${s}.html`)].includes(url.pathname)) return;
     event.preventDefault(); window.history.pushState({}, '', url); setPathname(url.pathname);
   };
-  return <div ref={scope} onClick={navigate}>
-    <a className="skip" href="#main"><T k="skip" /></a><ProgressAndGlow /><Header pathname={pathname} /><MotionControl />
+  return <div ref={scope} className={`site-shell${slug ? '' : ' has-hero-background'}`} onClick={navigate}>
+    {!slug && <div className="hero-backdrop" aria-hidden="true"><SourceImage className="hero-backdrop-image" src="/assets/UAE Currency and White Eagle Logo.png" alt="" width="1672" height="941" fetchPriority="high" /></div>}
+    <a className="skip" href="#main"><T k="skip" /></a><ProgressAndGlow /><Header pathname={pathname} />
     <div className="ambient-motes" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
     {slug ? <ServicePage key={slug} slug={slug} /> : <Home />}
     <Footer /><a className="floating-wa" href={WHATSAPP} aria-label={tr('floatingLabel')}>◉</a>

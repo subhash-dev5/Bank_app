@@ -25,14 +25,22 @@ The server binds to loopback for local review. Configure production hosting, pro
 
 ## Included
 
+All CSS font sizes are increased by 20%, with a minimum of 12px for the smallest captions. `src/typography.css` adds wrapping and spacing for larger labels, mobile menus and form controls. Text embedded in the supplied poster images is part of the artwork and is not resized independently.
+
+The contact section contains a lazy-loaded Google Maps iframe in a glass card, with an office-address caption and an external “Open in Google Maps” link. The public query embed needs no API key or Maps JavaScript SDK. The `useOfficeMap` hook switches the map language with the page. Google serves the map externally; the exact business marker should be checked during live browser review.
+
+Service posters fill their cards edge to edge at their original 2:3 aspect ratio. Shared liquid-glass styles in `src/glass.css` add translucent surfaces, blur, rounded edges and reflective highlights to cards and buttons. Readable dark button tints and opaque fallbacks are provided when backdrop filtering is unsupported.
+
+The client-supplied `public/assets/UAE Currency and White Eagle Logo.png` is the shared header and hero backdrop. A scroll-linked fade transitions it to ivory as the hero leaves the viewport, while the sticky header becomes solid. The backdrop fade and parallax run automatically.
+
 - All home-page sections and five service views at `/services/<slug>.html`. NafIs links to the flagged section on the personal-loan view.
 - React-managed English/Arabic switching, RTL layout and internal navigation. Language survives internal navigation; nothing persists after reload.
 - Personal/salary and mortgage calculators, zero-interest support, amortisation chart, animated payment values and WhatsApp result links.
 - Four-question enquiry flow, review placeholders, accessible tabs, FAQs, mobile navigation and local-only form validation.
 - Layered skyline parallax, short pinned service rail, staggered reveals, card tilt with pointer highlight, magnetic hover buttons, floating particles/orbits, scroll progress and panel transitions.
-- Reduced-motion support, touch fallbacks and native service scrolling if GSAP is unavailable.
+- Automatic full motion, touch fallbacks and native service scrolling if GSAP is unavailable.
 - Strong staggered entrance reveals, continuously floating skyline and coins, visibly rotating orbit details, scroll-drawn accents, process highlights, click ripples, calculator feedback and a scroll-progress back-to-top button. Core CSS and native scroll reveals start without waiting for the scroll engine.
-- A visible **Full motion / Reduced motion** control follows the device setting initially and lets the reviewer opt into either mode. It does not persist preferences.
+- Full animations start automatically. The motion control button has been removed at the client’s request.
 
 Internet access loads Google Fonts and supplied source images. Exact GSAP/ScrollTrigger **3.12.5** is installed locally and split into a local Vite chunk, so animations do not rely on an external CDN. Failed images use an inline SVG placeholder and are logged in `window.imageFailures` and the console.
 

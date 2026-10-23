@@ -96,7 +96,31 @@ test('real React interactions: tabs, enquiry, Arabic, client routes, reviews, im
   await click('.menu-toggle'); assert.equal($('.menu-toggle').getAttribute('aria-expanded'), 'true');
 });
 
-test('full motion works with the CDN absent; scroll reveals and local engine respond to the review control', async () => {
+test('shared hero backdrop fades with scrolling and resets on service navigation', async () => {
+  const hero = $('.hero'), header = $('.site-header'), shell = $('.site-shell');
+  const originalHeroBounds = hero.getBoundingClientRect, originalHeaderBounds = header.getBoundingClientRect;
+  hero.getBoundingClientRect = () => ({ top: 99 - window.scrollY, bottom: 1000 - window.scrollY, height: 901 });
+  header.getBoundingClientRect = () => ({ height: 99 });
+  const scrollTo = async value => {
+    window.scrollY = globalThis.scrollY = value;
+    await act(async () => { window.dispatchEvent(new Event('scroll')); await new Promise(resolve => setTimeout(resolve, 10)); });
+  };
+  try {
+    await scrollTo(0); assert.equal(Number(shell.style.getPropertyValue('--hero-background-opacity')), 1);
+    await scrollTo(450);
+    const midway = Number(shell.style.getPropertyValue('--hero-background-opacity'));
+    assert(midway > 0 && midway < 1, 'The fade has intermediate opacity rather than switching abruptly');
+    assert(parseFloat(shell.style.getPropertyValue('--hero-background-shift')) < 0, 'Background parallax is automatically active');
+    await scrollTo(1000); assert.equal(Number(shell.style.getPropertyValue('--hero-background-opacity')), 0);
+    assert.equal(Number(shell.style.getPropertyValue('--hero-header-opacity')), 1);
+    await scrollTo(0);
+    await click('a[href="/services/real-estate-financing.html"]');
+    assert(!$('.hero-backdrop')); assert.equal(shell.style.getPropertyValue('--hero-background-opacity'), '');
+    await click('a[href="/#services"]'); assert($('.hero-backdrop'));
+  } finally { hero.getBoundingClientRect = originalHeroBounds; header.getBoundingClientRect = originalHeaderBounds; window.scrollY = globalThis.scrollY = 0; }
+});
+
+test('full motion starts automatically without a control button or CDN scripts', async () => {
   const observers = [];
   class Observer {
     constructor(callback) { this.callback = callback; this.targets = []; observers.push(this); }
@@ -104,9 +128,9 @@ test('full motion works with the CDN absent; scroll reveals and local engine res
     disconnect() { this.targets = []; }
   }
   window.IntersectionObserver = globalThis.IntersectionObserver = Observer;
-  assert.equal(document.documentElement.dataset.motion, 'reduced');
-  await click('#motion-toggle');
   assert.equal(document.documentElement.dataset.motion, 'full');
+  assert.equal($('#motion-toggle'), null);
+  window.dispatchEvent(new Event('shahin:motion-change'));
   const heading = $('.section-heading');
   assert(heading.classList.contains('enter-ready'));
   const observer = observers.find(item => item.targets.includes(heading));
@@ -120,10 +144,6 @@ test('full motion works with the CDN absent; scroll reveals and local engine res
   const { gsap, ScrollTrigger } = await vite.ssrLoadModule('/src/lib/animationEngine.js');
   try {
     assert(ScrollTrigger.getAll().length > 0, 'Scroll animations are registered');
-    await click('#motion-toggle');
-    assert.equal(document.documentElement.dataset.motion, 'reduced');
-    assert.equal(ScrollTrigger.getAll().length, 0, 'Reduced mode tears down scroll animations');
-    assert(!heading.classList.contains('enter-ready'), 'Content remains visible in reduced mode');
     const html = await fs.readFile(new URL('../index.html', import.meta.url), 'utf8');
     assert(!html.includes('cdnjs.cloudflare.com'));
   } finally { ScrollTrigger.disable(); gsap.ticker.sleep(); delete window.IntersectionObserver; delete globalThis.IntersectionObserver; }
