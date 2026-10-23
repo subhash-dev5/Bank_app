@@ -34,7 +34,7 @@ export function Calculator() {
           const formatted = id === 'amount' ? `${number(values[id])} ${tr('amountUnit')}` : id === 'years' ? `${number(values[id])} ${tr('yearsUnit')}` : `${number(values[id], 1)}%`;
           return <div className="range-field" key={id}>
             <div><label htmlFor={id}>{tr(`${id}label`)}</label><output htmlFor={id} id={`${id}-value`}>{formatted}</output></div>
-            <input id={id} type="range" min={min} max={max} step={step} value={values[id]} aria-valuetext={formatted} onChange={e => setValues(v => ({ ...v, [id]: Number(e.target.value) }))} />
+            <input id={id} type="range" min={min} max={max} step={step} value={values[id]} style={{ '--range-progress': `${(values[id] - min) / (max - min) * 100}%` }} aria-valuetext={formatted} onChange={e => setValues(v => ({ ...v, [id]: Number(e.target.value) }))} />
             <div className="range-ends"><span>{number(min)}</span><span>{number(max)}</span></div>
           </div>;
         })}
@@ -73,6 +73,12 @@ export function Eligibility() {
   </div>;
 }
 
+const reviewAuthors = [
+  { name: 'L Alneyadi', initial: 'L', color: 'purple' },
+  { name: 'Ilm X', initial: 'I', color: 'olive' },
+  { name: 'Shaima Bloshi', initial: 'S', color: 'green' },
+];
+
 export function Reviews() {
   const { tr, lang } = useLanguage();
   const [index, setIndex] = useState(0);
@@ -80,7 +86,17 @@ export function Reviews() {
   return <div className="review-carousel" role="region" aria-roledescription="carousel" aria-label={tr('navreviews')} onKeyDown={e => {
     if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
     e.preventDefault(); change((e.key === 'ArrowRight' ? 1 : -1) * (lang === 'ar' ? -1 : 1));
-  }}><span className="quote-mark" aria-hidden="true">“</span><div id="review-copy" aria-live="polite"><p className="review-placeholder flow-panel" key={index}>{tr(`review${index}`)}</p><T as="p" k="reviewNote" className="review-note" /></div>
+  }}><span className="quote-mark" aria-hidden="true">“</span><div id="review-copy" aria-live="polite">
+      <figure className="client-review flow-panel" key={index}>
+        <figcaption className="review-author">
+          <span className={`review-avatar ${reviewAuthors[index].color}`} aria-hidden="true">{reviewAuthors[index].initial}</span>
+          <bdi className="review-author-name">{reviewAuthors[index].name}</bdi>
+        </figcaption>
+        <span className="review-stars" role="img" aria-label={tr('reviewRating')}><span aria-hidden="true">★★★★★</span></span>
+        <blockquote className="review-text"><T as="p" k={`review${index}`} /></blockquote>
+      </figure>
+      <T as="p" k="reviewNote" className="review-note" />
+    </div>
     <div className="carousel-controls"><button id="review-prev" type="button" aria-label={tr('previousReview')} onClick={() => change(-1)}>←</button><span id="review-count">{String(index + 1).padStart(2, '0')} / 03</span><button id="review-next" type="button" aria-label={tr('nextReview')} onClick={() => change(1)}>→</button></div>
   </div>;
 }

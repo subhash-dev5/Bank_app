@@ -67,6 +67,13 @@ export function Header({ pathname }) {
   const { tr, lang, setLang } = useLanguage();
   const [open, setOpen] = useState(false), [compact, setCompact] = useState(false), [active, setActive] = useState('');
   const menuButton = useRef(null);
+  const header = useRef(null);
+  useEffect(() => {
+    if (!open) return;
+    const dismiss = event => { if (!header.current?.contains(event.target)) setOpen(false); };
+    document.addEventListener('pointerdown', dismiss);
+    return () => document.removeEventListener('pointerdown', dismiss);
+  }, [open]);
   useEffect(() => {
     let frame = 0;
     const scroll = () => {
@@ -89,7 +96,7 @@ export function Header({ pathname }) {
     ['services', 'process', 'calculators', 'about', 'reviews', 'contact'].forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
     return () => observer.disconnect();
   }, [pathname]);
-  return <header className={`site-header${compact ? ' compact' : ''}`}>
+  return <header ref={header} className={`site-header${compact ? ' compact' : ''}`}>
     <a className="brand" href="/" aria-label={`${BRAND} — ${tr('homeLabel')}`}>
       <span className="brand-mark" aria-hidden="true"><SourceImage className="client-logo" src="https://shahinbs.com/wp-content/uploads/2024/11/cropped-Untitled-3-copy-2.jpg" width="43" height="43" /></span>
       <span className="brand-name">AL SHAHIN<small><T k="brandSub" /></small></span>

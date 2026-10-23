@@ -60,16 +60,16 @@
     "ar": "تحقق من أهليتي ←"
   },
   "proof1": {
-    "en": "PLACEHOLDER: service credentials",
-    "ar": "محتوى مؤقت: مؤهلات الخدمة"
+    "en": "Available 24/7",
+    "ar": "متاحون على مدار الساعة"
   },
   "proof2": {
-    "en": "PLACEHOLDER: experience",
-    "ar": "محتوى مؤقت: الخبرة"
+    "en": "Proudly serving for years",
+    "ar": "نخدمكم بفخر منذ سنوات"
   },
   "proof3": {
-    "en": "PLACEHOLDER: client outcomes",
-    "ar": "محتوى مؤقت: نتائج العملاء"
+    "en": "Helping customers with investments and funding",
+    "ar": "نساعد العملاء في الاستثمار والتمويل"
   },
   "heroAdvisory": {
     "en": "Independent guidance. Personal attention.",
@@ -80,8 +80,8 @@
     "ar": "مرّر للاستكشاف ↓"
   },
   "licensed": {
-    "en": "PLACEHOLDER: licensed / registered",
-    "ar": "محتوى مؤقت: الترخيص / التسجيل"
+    "en": "Commercial business licence · Ras Al Khaimah, UAE",
+    "ar": "رخصة تجارية للأعمال · رأس الخيمة، الإمارات العربية المتحدة"
   },
   "sharia": {
     "en": "Sharia-compliant options available",
@@ -788,20 +788,24 @@
     "ar": "ابدأ من جديد"
   },
   "review0": {
-    "en": "PLACEHOLDER: needs client input — approved client review, attribution and consent.",
-    "ar": "محتوى مؤقت: يتطلب مراجعة عميل معتمدة مع بيانات صاحبها وموافقته."
+    "en": "I would like to express my sincere thanks to Mr. Abdullah. He is a respectful and professional person who supported me wholeheartedly until everything was completed. He treated me like a sister, showed great understanding, and never hesitated to help. His dedication and hard work truly stand out. Words are not enough to describe his efforts, and I highly recommend dealing with him. Thank you, Mr. Abdullah.",
+    "ar": "أود أن أعرب عن خالص شكري للسيد عبدالله. إنه شخص محترم ومهني، دعمني بكل إخلاص حتى اكتمل كل شيء. عاملني كأخت، وأظهر تفهماً كبيراً، ولم يتردد أبداً في المساعدة. إن تفانيه وعمله الجاد يستحقان التقدير حقاً. الكلمات لا تكفي لوصف جهوده، وأوصي بشدة بالتعامل معه. شكراً لك، سيد عبدالله."
   },
   "review1": {
-    "en": "PLACEHOLDER: needs client input — a second verified review and permission to publish.",
-    "ar": "محتوى مؤقت: يتطلب مراجعة ثانية موثقة وإذن النشر."
+    "en": "I would like to recommend this company for there fast service and smooth transaction process they helped me in short period of time and there were so nice people",
+    "ar": "أود أن أوصي بهذه الشركة لخدمتها السريعة وسلاسة إجراءات المعاملة. لقد ساعدوني خلال فترة قصيرة، وكانوا أشخاصاً لطفاء للغاية."
   },
   "review2": {
-    "en": "PLACEHOLDER: needs client input — a third verified review and permission to publish.",
-    "ar": "محتوى مؤقت: يتطلب مراجعة ثالثة موثقة وإذن النشر."
+    "en": "I would like to thank Al shahin consulting in banking services for helping me obtain my loan. Their service was very professional, respectful, and smooth. They handled my application with honesty and genuine dedication. I really appreciate their support and highly recommend them.",
+    "ar": "أود أن أشكر الشاهين للاستشارات في الخدمات المصرفية على مساعدتي في الحصول على قرضي. كانت خدمتهم مهنية ومحترمة وسلسة للغاية. تعاملوا مع طلبي بأمانة وتفانٍ حقيقي. أقدّر دعمهم كثيراً وأوصي بهم بشدة."
   },
   "reviewNote": {
-    "en": "No testimonial, rating or client identity is asserted.",
-    "ar": "لا يتم تأكيد أي شهادة أو تقييم أو هوية عميل."
+    "en": "Experiences shared by our clients.",
+    "ar": "تجارب شاركها عملاؤنا."
+  },
+  "reviewRating": {
+    "en": "5 out of 5 stars",
+    "ar": "٥ نجوم من ٥"
   },
   "required": {
     "en": "Please complete this field.",

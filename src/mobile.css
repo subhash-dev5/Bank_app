@@ -69,6 +69,7 @@
   .hero-backdrop-image{height:calc(100% + 48px);object-position:center top}
   .hero-backdrop:after,[dir=rtl] .hero-backdrop:after{background:linear-gradient(180deg,#f7f3eae8 0%,#f7f3eae0 35%,#f7f3ea8c 65%,#f7f3ea25 100%)}
   h2{font-size:clamp(38px,8.5vw,54px);line-height:1.15;overflow-wrap:break-word}
+  .calc-intro h2,.contact-section .section-heading h2,.inline-heading h2{font-size:clamp(38px,8.5vw,54px);line-height:1.15}
   .section-heading .eyebrow{font-size:11px;line-height:1.8;margin-bottom:16px}
   .section-heading h2{margin-bottom:22px}
   .trust-strip{padding-inline:var(--gutter);gap:16px 20px;align-items:start}
@@ -90,6 +91,7 @@
   input[type=range]{min-height:36px;touch-action:pan-y}
   .monthly-number{font-size:clamp(36px,8vw,52px);overflow-wrap:anywhere}
   .calc-totals{gap:14px;flex-wrap:wrap}.calc-totals>*{min-width:0}
+  .calc-totals{grid-template-columns:repeat(2,minmax(0,1fr))}
   .calc-result .button,.contact-form>.button{width:100%;white-space:normal}
   .flow-top{flex-wrap:wrap;gap:14px}
   #flow-body h3{font-size:32px;line-height:1.3}
@@ -123,6 +125,8 @@
   footer{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
   .service-subnav{padding-block:14px;gap:10px}
   .service-page .detail-hero h1{font-size:clamp(46px,10vw,72px);overflow-wrap:break-word}
+  [dir=rtl] .service-page .detail-hero h1{font-size:clamp(40px,9vw,64px);line-height:1.35}
+  .service-page .detail-art.service-poster{max-width:min(100%,380px)}
   .service-page .detail-lead{font-size:28px;line-height:1.4}
   .service-page .detail-hero .detail-description{font-size:16px}
   .detail-content .detail-panel{padding:24px}
@@ -161,4 +165,5 @@
   .hero-ctas{flex-direction:column;align-items:stretch;gap:12px}
   .hero-proof>span{font-size:10px}
   .trust-strip{grid-template-columns:1fr}
+  .calc-totals{grid-template-columns:1fr}
 }

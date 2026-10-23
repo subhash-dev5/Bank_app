@@ -13,7 +13,7 @@
 |---|---|---|---|
 | local-understand-bg.png | About / Local understanding square card | Client-supplied image replaces the original blue monogram composition at a 1:1 ratio. Approve image rights, illustrated skyline and embedded wording; optimise the PNG for production. | Client |
 | رؤية أوضح لمستقبل أفضل | Embedded text in local-understand-bg.png | needs native review; supplied artwork remains in Arabic in both language modes. | Client |
-| Trust-bg.png | Trust is personal / reviews section | Client-supplied background with a dark readability overlay. Review production image rights and mobile crop. Existing review placeholders remain unchanged. | Client |
+| Trust-bg.png | Trust is personal / reviews section | Client-supplied background with a dark readability overlay. Review production image rights and mobile crop. Three client-supplied reviews replace the placeholders. | Client |
 
 ## Contact map integration
 
@@ -54,8 +54,8 @@ All placeholders and draft content below require approval before production. No 
 | NafIs / Personal loan | Sixth card and personal-loan.html#nafis | Potentially duplicated or mislabelled. Rendered as a normal card; no programme affiliation inferred. Five unique detail pages as requested. | Client |
 | Live-site verification | All business facts | Live-site browser request timed out on 22 October 2026. Business details and source URLs were taken from user-supplied brief. | Dechub |
 | Logo source and display identity | Header / footer | Original supplied JPG is hotlinked in header with a monogram fallback; typographic wordmark is mock styling pending an approved vector logo. | Client |
-| Licence / registration badge | Trust strip | PLACEHOLDER: needs client input. Provide verified licence details and authorised wording. | Client |
-| Service credentials, experience, client outcomes | Three hero proof chips | PLACEHOLDER: needs client input. No numerical proof or achievement is asserted. | Client |
+| Licence / registration badge | Trust strip | Filled with user-supplied wording: commercial business licence issued in Ras Al Khaimah, UAE. Registered legal name, licence number and issuing authority have not been supplied. No financial regulatory authorisation is asserted. | Client |
+| Hero proof badges | Three hero proof chips | Filled with user-supplied claims: available 24/7, proudly serving for years, and helping customers with investments and funding. No specific number of years or outcome statistics added. | Client |
 | Hero headline and marketing copy | Hero and section headings | Editorial copy written for mock, including “Independent guidance” and “trusted” wording; client must approve exact positioning and claims. | Client |
 | Benefits, audiences and service descriptions | Six service cards and five detail pages | Draft copy written for mock. Confirm actual service scope, availability and advisory role. | Client |
 | Generic four-step process | How it works | Draft process; verify comparison, preparation and submission responsibilities. No timeline promised. | Client |
@@ -63,7 +63,7 @@ All placeholders and draft content below require approval before production. No 
 | About story and listed service areas | About | Rewritten from user-provided live-site summary; expertise, tailored support and independence wording need approval. | Client |
 | Partner bank 1–8 | Partnership strip | Eight dashed PLACEHOLDER tiles. No real affiliation claimed; obtain agreements and approved logos before replacement. | Client |
 | Team cards 1–3 | Team section | PLACEHOLDER: needs client input. Names, roles, biographies, approved portraits and publication consent. | Client |
-| Review slides 1–3 | Review carousel | PLACEHOLDER: needs client input. Approved exact reviews, attribution and consent; no invented quotes, ratings or identities. | Client |
+| Review slides 1–3 | Review carousel | User supplied three screenshots and requested display: L Alneyadi, Ilm X and Shaima Bloshi, each showing five stars. English comments and author names are transcribed from those screenshots. Arabic translations need native review. Relative posting dates and reviewer activity counts are omitted. | Client |
 | FAQ questions and answers 1–8 | FAQ accordion | All are generic draft guidance and need client review, including documents, bank distinction, Islamic options, salary transfer, approval, business finance, estimates and contact. | Client |
 | Calculator assumptions | Personal/salary and mortgage calculators | Illustrative, not an offer. Reducing-balance formula; default AED 150,000 / 4 years / 5.5%, mortgage AED 1,000,000 / 20 years / 4.5%. Rates and ranges are demo inputs, not actual product terms; excludes fees and insurance. | Dechub |
 | Eligibility flow questions and income bands | Eligibility mini-flow | Draft questions and arbitrary income bands only organise an enquiry. No eligibility assessment, application or callback occurs automatically. | Client |
@@ -102,12 +102,12 @@ Machine-drafted Arabic, including the brand wording, UI, legal notices, accessib
 | القروض والتمويل العقاري وتمويل الأعمال في رأس الخيمة، نساعدك في كل خطوة. | `heroText` | needs native review | Client |
 | لنتحدث عبر واتساب ↖ | `startChat` | needs native review | Client |
 | تحقق من أهليتي ← | `checkEligibility` | needs native review | Client |
-| محتوى مؤقت: مؤهلات الخدمة | `proof1` | needs native review | Client |
-| محتوى مؤقت: الخبرة | `proof2` | needs native review | Client |
-| محتوى مؤقت: نتائج العملاء | `proof3` | needs native review | Client |
+| متاحون على مدار الساعة | `proof1` | needs native review | Client |
+| نخدمكم بفخر منذ سنوات | `proof2` | needs native review | Client |
+| نساعد العملاء في الاستثمار والتمويل | `proof3` | needs native review | Client |
 | إرشاد مستقل. اهتمام شخصي. | `heroAdvisory` | needs native review | Client |
 | مرّر للاستكشاف ↓ | `explore` | needs native review | Client |
-| محتوى مؤقت: الترخيص / التسجيل | `licensed` | needs native review | Client |
+| رخصة تجارية للأعمال · رأس الخيمة، الإمارات العربية المتحدة | `licensed` | needs native review | Client |
 | تتوفر خيارات متوافقة مع الشريعة | `sharia` | needs native review | Client |
 | دعم بالعربية والإنجليزية | `bilingual` | needs native review | Client |
 | تواصل على مدار الساعة · بانتظار التأكيد | `always` | needs native review | Client |
@@ -284,10 +284,11 @@ Machine-drafted Arabic, including the brand wording, UI, legal notices, accessib
 | هذا ملخص استفسار وليس قرار أهلية. لم يتم إرسال أي شيء. | `flowDisclaimer` | needs native review | Client |
 | اطلب معاودة الاتصال عبر واتساب ↖ | `flowSend` | needs native review | Client |
 | ابدأ من جديد | `restart` | needs native review | Client |
-| محتوى مؤقت: يتطلب مراجعة عميل معتمدة مع بيانات صاحبها وموافقته. | `review0` | needs native review | Client |
-| محتوى مؤقت: يتطلب مراجعة ثانية موثقة وإذن النشر. | `review1` | needs native review | Client |
-| محتوى مؤقت: يتطلب مراجعة ثالثة موثقة وإذن النشر. | `review2` | needs native review | Client |
-| لا يتم تأكيد أي شهادة أو تقييم أو هوية عميل. | `reviewNote` | needs native review | Client |
+| Arabic translation of L Alneyadi's supplied review | `review0` | needs native review | Client |
+| Arabic translation of Ilm X's supplied review | `review1` | needs native review | Client |
+| Arabic translation of Shaima Bloshi's supplied review | `review2` | needs native review | Client |
+| تجارب شاركها عملاؤنا. | `reviewNote` | needs native review | Client |
+| ٥ نجوم من ٥ | `reviewRating` | needs native review | Client |
 | يرجى إكمال هذا الحقل. | `required` | needs native review | Client |
 | أدخل رقم هاتف صحيحاً (٧–١٥ رقماً). | `phoneError` | needs native review | Client |
 | يرجى الإقرار بإشعار النموذج التجريبي. | `consentError` | needs native review | Client |

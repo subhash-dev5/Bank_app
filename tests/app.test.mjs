@@ -92,6 +92,7 @@ test('real React interactions: tabs, enquiry, Arabic, client routes, reviews, im
   assert($('#payment').textContent.includes('3,488.47'));
   await click('#tab-mortgage'); assert.equal($('#amount').value, '1000000'); assert($('#payment').textContent.includes('6,326.49'));
   await change('#rate', '0'); assert($('#payment').textContent.includes('4,166.67'));
+  assert.equal($('#rate').style.getPropertyValue('--range-progress'), '0%');
   assert(decodeURIComponent($('.send-result').href).includes('not an offer'));
   for (let i = 0; i < 4; i++) { assert($('#flow-next').disabled); await click('#flow-body input'); await click('#flow-next'); }
   assert($('#flow-body').textContent.includes('Nothing has been sent.'));
@@ -100,7 +101,15 @@ test('real React interactions: tabs, enquiry, Arabic, client routes, reviews, im
   await click('a[href="/services/real-estate-financing.html"]'); assert.equal(window.location.pathname, '/services/real-estate-financing.html'); assert.equal(document.documentElement.dir, 'rtl');
   await click('a[href="/#services"]'); assert.equal(window.location.pathname, '/');
   await click('.language'); assert.equal(document.documentElement.dir, 'ltr');
+  assert.equal($('.review-author-name').textContent, 'L Alneyadi');
+  assert($('.review-text').textContent.includes('Thank you, Mr. Abdullah.'));
+  assert.equal($('.review-stars').getAttribute('aria-label'), '5 out of 5 stars');
   await click('#review-next'); assert.equal($('#review-count').textContent, '02 / 03');
+  assert.equal($('.review-author-name').textContent, 'Ilm X');
+  assert($('.review-text').textContent.includes('smooth transaction process'));
+  await click('#review-next'); assert.equal($('.review-author-name').textContent, 'Shaima Bloshi');
+  assert($('.review-text').textContent.includes('helping me obtain my loan'));
+  await click('#review-next'); assert.equal($('#review-count').textContent, '01 / 03');
   await act(() => $('#contact-form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })));
   assert($('#error-name').textContent); assert.equal($('#form-status').textContent, '');
   await change('#contact-name', 'Demo Reviewer'); await change('#contact-phone', '+971 55 123 4567'); await change('#contact-service', 'personal-loan'); await click('#contact-consent');
@@ -110,6 +119,12 @@ test('real React interactions: tabs, enquiry, Arabic, client routes, reviews, im
   const img = $('.source-image'); const warn = console.warn; console.warn = () => {};
   try { await act(() => img.dispatchEvent(new Event('error'))); assert(img.src.startsWith('data:image/svg+xml')); assert(window.imageFailures.length > 0); } finally { console.warn = warn; }
   await click('.menu-toggle'); assert.equal($('.menu-toggle').getAttribute('aria-expanded'), 'true');
+  await act(() => document.body.dispatchEvent(new Event('pointerdown', { bubbles: true })));
+  assert.equal($('.menu-toggle').getAttribute('aria-expanded'), 'false');
+  await click('.menu-toggle');
+  await act(() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })));
+  assert.equal($('.menu-toggle').getAttribute('aria-expanded'), 'false');
+  assert.equal(document.activeElement, $('.menu-toggle'));
 });
 
 test('shared hero backdrop fades with scrolling and resets on service navigation', async () => {
