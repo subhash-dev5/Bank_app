@@ -47,11 +47,16 @@ export function usePageMotion(scope, pathname, lang) {
       context = gsap.context(() => {
         media = gsap.matchMedia();
         media.add('(min-width: 1101px) and (pointer: fine)', () => {
-          const rail = root.querySelector('.services-track'), section = root.querySelector('.services-section');
-          if (!rail) return;
+          const rail = root.querySelector('.services-track'), viewport = root.querySelector('.services-window');
+          if (!rail || !viewport) return;
+          const pinTop = () => Math.ceil(document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 24;
+          // Tall posters must remain vertically scrollable on short laptop screens.
+          // Only pin when the complete row fits beneath the sticky header.
+          if (viewport.offsetHeight > window.innerHeight - pinTop() - 24) return;
+          const distance = () => Math.max(0, rail.scrollWidth - viewport.clientWidth);
+          if (!distance()) return;
           document.body.classList.add('motion-rail');
-          const distance = () => Math.max(0, rail.scrollWidth - root.querySelector('.services-window').clientWidth);
-          const animation = gsap.to(rail, { x: () => (lang === 'ar' ? 1 : -1) * distance(), ease: 'none', scrollTrigger: { trigger: section, start: () => section.offsetHeight > innerHeight - 100 ? 'bottom bottom' : 'top 85px', end: () => `+=${Math.min(distance(), innerHeight * 1.3)}`, pin: true, scrub: .5, invalidateOnRefresh: true } });
+          const animation = gsap.to(rail, { x: () => (lang === 'ar' ? 1 : -1) * distance(), ease: 'none', scrollTrigger: { trigger: viewport, start: () => `top ${pinTop()}px`, end: () => `+=${Math.min(distance(), window.innerHeight * 1.3)}`, pin: true, scrub: .5, invalidateOnRefresh: true } });
           const focus = event => {
             const card = event.target.closest('.service-card'); if (!card) return;
             const cards = [...rail.children], fraction = cards.indexOf(card) / Math.max(1, cards.length - 1), trigger = animation.scrollTrigger;
@@ -69,8 +74,10 @@ export function usePageMotion(scope, pathname, lang) {
     }
     setup();
     reduced.addEventListener('change', setup);
-    const resize = () => engine?.ScrollTrigger.refresh();
-    document.fonts?.ready.then(() => { if (!disposed) resize(); });
-    return () => { disposed = true; generation++; reduced.removeEventListener('change', setup); reset(); delete root.dataset.animationEngine; };
+    let resizeTimer;
+    const resize = () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(setup, 150); };
+    window.addEventListener('resize', resize);
+    document.fonts?.ready.then(() => { if (!disposed) setup(); });
+    return () => { disposed = true; generation++; clearTimeout(resizeTimer); window.removeEventListener('resize', resize); reduced.removeEventListener('change', setup); reset(); delete root.dataset.animationEngine; };
   }, [scope, pathname, lang]);
 }
