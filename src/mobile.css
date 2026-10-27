@@ -167,3 +167,26 @@
   .trust-strip{grid-template-columns:1fr}
   .calc-totals{grid-template-columns:1fr}
 }
+
+/* Each card sticks while the following service scrolls over it, in document order. */
+@media(max-width:767px) and (min-height:560px){
+  .services-section.mobile-service-stack{overflow:visible;isolation:isolate}
+  .mobile-service-stack .services-window{overflow:visible;padding-bottom:24px}
+  .mobile-service-stack .services-track{display:flex;flex-direction:column;width:100%;gap:28svh;align-items:center;padding-bottom:24svh}
+  .mobile-service-stack .service-card{
+    position:sticky;top:calc(var(--service-stack-top) + var(--stack-index)*4px);
+    z-index:calc(var(--stack-index) + 1);width:100%;max-width:440px;
+    height:var(--service-stack-height);margin:0;flex:none;
+    background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none;
+    transform-origin:center top;transform:scale(calc(1 - var(--stack-depth,0)*.035));
+    box-shadow:0 12px 32px #0b1f3a18;
+    opacity:1;translate:none;scale:1;transition:none;
+  }
+  .mobile-service-stack .service-card:focus-within{z-index:8;transform:none}
+  .mobile-service-stack .service-card .service-art{flex:1;min-height:120px;height:auto;aspect-ratio:auto;background:var(--paper)}
+  .mobile-service-stack .service-card .source-image{height:100%;width:100%;object-fit:contain;transform:none}
+  .mobile-service-stack .service-card-body{flex:none;padding:16px 20px}
+  .mobile-service-stack .service-card h3{font-size:26px;line-height:1.15;margin-bottom:8px}
+  .mobile-service-stack .service-benefit,.mobile-service-stack .service-who{font-size:13px;line-height:1.5;margin-bottom:8px}
+  .mobile-service-stack .service-card .text-link{margin-top:0;padding-top:6px;min-height:44px}
+}

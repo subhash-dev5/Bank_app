@@ -151,6 +151,57 @@ test('shared hero backdrop fades with scrolling and resets on service navigation
   } finally { hero.getBoundingClientRect = originalHeroBounds; header.getBoundingClientRect = originalHeaderBounds; window.scrollY = globalThis.scrollY = 0; }
 });
 
+test('mobile service stack follows card order and falls back for reduced motion, text overflow and desktop', async () => {
+  const { useMobileServiceStack } = await vite.ssrLoadModule('/src/hooks/mobileServiceStack.js');
+  const originalMatchMedia = globalThis.matchMedia, originalHeight = window.innerHeight;
+  const listeners = new Set();
+  let mobile = true, reduced = false;
+  globalThis.matchMedia = window.matchMedia = query => ({
+    get matches() { return query.includes('max-width: 767px') ? mobile : query.includes('prefers-reduced-motion') && reduced; },
+    addEventListener(_type, listener) { listeners.add(listener); },
+    removeEventListener(_type, listener) { listeners.delete(listener); },
+  });
+  window.innerHeight = 760;
+  const host = document.createElement('div'); document.body.append(host);
+  const scope = { current: null }, stackRoot = createRoot(host);
+  function Harness() {
+    useMobileServiceStack(scope, '/', 'en');
+    return createElement('div', { ref: node => { scope.current = node; } },
+      createElement('section', { className: 'services-section' },
+        createElement('div', { className: 'services-window' },
+          createElement('div', { className: 'services-track' },
+            ...Array.from({ length: 6 }, (_, index) => createElement('article', { key: index, className: 'service-card' },
+              createElement('div', { className: 'service-card-body' }, `Service ${index + 1}`)))))));
+  }
+  const refresh = async () => { await act(async () => { for (const listener of [...listeners]) listener(); }); };
+  try {
+    await act(async () => stackRoot.render(createElement(Harness)));
+    const section = host.querySelector('section'), cards = [...host.querySelectorAll('.service-card')];
+    assert(section.classList.contains('mobile-service-stack'));
+    assert.deepEqual(cards.map(card => card.style.getPropertyValue('--stack-index')), ['0', '1', '2', '3', '4', '5']);
+    let nextTop = 1000;
+    cards[1].getBoundingClientRect = () => ({ top: nextTop });
+    const scroll = async () => { await act(async () => { window.dispatchEvent(new Event('scroll')); await new Promise(resolve => setTimeout(resolve, 10)); }); };
+    await scroll(); assert.equal(cards[0].style.getPropertyValue('--stack-depth'), '0.000');
+    nextTop = 12; await scroll(); assert.equal(cards[0].style.getPropertyValue('--stack-depth'), '1.000');
+    nextTop = 1000; await scroll(); assert.equal(cards[0].style.getPropertyValue('--stack-depth'), '0.000', 'Reverse scrolling restores the earlier card');
+    reduced = true; await refresh(); assert(!section.classList.contains('mobile-service-stack'));
+    reduced = false; await refresh(); assert(section.classList.contains('mobile-service-stack'));
+    const body = cards[0].querySelector('.service-card-body');
+    Object.defineProperty(body, 'scrollHeight', { configurable: true, value: 1000 });
+    await refresh(); assert(!section.classList.contains('mobile-service-stack'), 'Large text remains vertically accessible');
+    Object.defineProperty(body, 'scrollHeight', { configurable: true, value: 200 });
+    await refresh(); assert(section.classList.contains('mobile-service-stack'));
+    mobile = false; await refresh(); assert(!section.classList.contains('mobile-service-stack'));
+    assert.equal(host.querySelectorAll('.service-card').length, 6);
+    await act(async () => stackRoot.unmount());
+    assert.equal(listeners.size, 0);
+  } finally {
+    await act(async () => stackRoot.unmount()); host.remove();
+    globalThis.matchMedia = window.matchMedia = originalMatchMedia; window.innerHeight = originalHeight;
+  }
+});
+
 test('full motion starts automatically without a control button or CDN scripts', async () => {
   const observers = [];
   class Observer {

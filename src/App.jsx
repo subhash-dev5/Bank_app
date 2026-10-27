@@ -5,6 +5,7 @@ import { usePageMotion } from './hooks/motion.js';
 import { useScrollDetails } from './hooks/interactions.js';
 import { motionQuery } from './lib/motionPreference.js';
 import { useHeroBackground } from './hooks/heroBackground.js';
+import { useMobileServiceStack } from './hooks/mobileServiceStack.js';
 
 function ProgressAndGlow() {
   const progress = useRef(null), glow = useRef(null);
@@ -63,6 +64,7 @@ function Site({ initialPath }) {
     return () => { delete document.documentElement.dataset.motion; };
   }, []);
   usePageMotion(scope, pathname, lang);
+  useMobileServiceStack(scope, pathname, lang);
   useScrollDetails(scope, pathname);
   useHeroBackground(scope, pathname);
   useEffect(() => {
